@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+   
+
+    <style>
+    
+
+    .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .signature-pad {
+            width: 300px;
+            height: 150px;
+        background-color: rgb(182, 182, 182);
+            margin-bottom: 10px;
+        }
+        .date-box {
+            border-radius: 0px;
+    font-family: Arial, sans-serif;
+}
+
+.date-box label {
+    font-weight: bold;
+}
+
+#date-input {
+    padding: 5px;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    color: red;
+}
+.input-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: center
+            ;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 8px;
+            border: 0px solid #ccc;
+            text-align: center;
+        }
+        table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 25%;
+    height: 10px; /* Puedes ajustar la altura según tus necesidades */
+    border: opx;
+    text-align: left;
+    vertical-align: top; /* Alinea el contenido a la parte superior */
+    padding: 1px; /* Opcional: Añade padding para separar el contenido del borde */
+}
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .form-row label {
+            margin-bottom: 5px;
+        }
+        .form-row textarea {
+            width: 100%;
+            height: 100px; /* Puedes ajustar este tamaño según tus necesidades */
+            resize: none; /* Esto deshabilita el redimensionamiento */
+        }
+        button {
+    display: block;
+    text-align: left;
+    margin: 0;
+  padding-top: 15px;
+  padding: 15px;
+}
+    
+    
+    </style>
+    <title>Levantamiento</title>
+
+</head>
+
+<body>
+
+
+    
+    <div id="survey-container">
+       
+
+ 
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <p><h2>Factores de riesgo ergonómico en el trabajo-identificación, análisis, prevención y control.</p><p>parte 1: manejo manual de cargas.</p><p>LEVANTAMIENTO / DESCENSO DE  CARGAS </p></h2> 
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+        </tr>
+    </table>
+    <h4>Formulario de Trabajador</h4>
+    <table class="mi-tabla">
+        <tr>
+            <th>
+            <div class="form-row">
+                <label for="numeroEmpleado">Nombre del trabajador:</label>
+                <input type="text" id="numeroEmpleado" name="numeroEmpleado" required>
+            </th>
+
+            <th>
+                <div class="form-row">
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero">
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                    </select>
+                </div>
+            </th>
+
+            <th>
+                <div class="form-row">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" required>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+            <div class="form-row">
+                <label for="actividad">Actividad:</label>
+                <select id="actividad" name="actividad">
+                    <option value="uno">LEVANTAMIENTO / DESCENSO DE  CARGAS</option>
+                </select>
+        </div>
+            </td>
+            <td>
+
+                <label for="nombreEmpleado">Puesto evaluado:</label>
+                <input type="text" id="nombreEmpleado" name="nombreEmpleado" required>
+            </td>
+            <td>
+                <label for="fecha">Fecha:</label><input type="date" id="fecha" name="fecha" required>
+            </td>
+        </tr>
+    </table>
+    
+
+    <table class="mi-tabla">
+
+    <tr>
+        <th>
+            
+            <label for="descripcion">Describe la actividad:</label>
+            <textarea id="descripcion" placeholder="Escribe la descripción de la actividad aquí..."></textarea>
+</label>
+        </th>
+    </tr>
+    </table>
+    
+    
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+
+    <table class="mi-tabla">
+        <tr>
+            <th colspan="2">
+                <h1>A) Peso de la carga y frecuencia</h1>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+                    <div class="form-row"><label for="actividad">Frecuencia con la que realizan la actividad:</label>
+                        <textarea id="actividadTextarea" placeholder=></textarea></div></td>
+                   <td>
+                    <div class="form-row"> <label for="actividad">Tiempo de duracion de la actividad</label>
+                    <textarea id="actividadTextarea" placeholder=></textarea></div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> <h3>Ingrese los valores correspondientes
+            
+                
+       
+
+                <div class="graph-container">
+                    <canvas id="graph" class="graph" width="500" height="300"></canvas>
+                    <div>
+                        <label for="x-input">Tiempo que se carga:</label>
+                        <input type="number" id="x-input" value="0">
+                        <label for="y-input">Peso de la carga:</label>
+                        <input type="number" id="y-input" value="0">
+                    </div>
+                </div>
+                <script>
+                    const graphCanvas = document.getElementById('graph');
+                    const graphCtx = graphCanvas.getContext('2d');
+                    const padding = 40; // Padding around the graph
+                    const graphWidth = graphCanvas.width - 2 * padding;
+                    const graphHeight = graphCanvas.height - 2 * padding;
+            
+                    function drawPoint(x, y) {
+                        graphCtx.clearRect(0, 0, graphCanvas.width, graphCanvas.height);
+            
+                        // Draw Y axis
+                        graphCtx.beginPath();
+                        graphCtx.moveTo(padding, padding);
+                        graphCtx.lineTo(padding, graphCanvas.height - padding);
+                        graphCtx.stroke();
+            
+                        // Draw Y labels
+                        graphCtx.save();
+                        graphCtx.translate(10, graphCanvas.height / 2);
+                        graphCtx.rotate(-Math.PI / 2);
+                        graphCtx.textAlign = "center";
+                        graphCtx.fillText("Kilos", 0, 0);
+                        graphCtx.restore();
+            
+                        // Draw X axis
+                        graphCtx.beginPath();
+                        graphCtx.moveTo(padding, graphCanvas.height - padding);
+                        graphCtx.lineTo(graphCanvas.width - padding, graphCanvas.height - padding);
+                        graphCtx.stroke();
+            
+                        // Draw X labels
+                        graphCtx.textAlign = "center";
+                        graphCtx.fillText("", graphCanvas.width / 2, graphCanvas.height - 10);
+            
+                        // Draw point
+                        graphCtx.beginPath();
+                        graphCtx.arc(padding + (x / 7) * graphWidth, graphCanvas.height - padding - (y / 55) * graphHeight, 5, 0, 2 * Math.PI);
+                        graphCtx.fillStyle = 'black';
+                        graphCtx.fill();
+                    }
+            
+                    // Initial point at the bottom-left corner
+                    drawPoint(0, 0);
+            
+                    // Update the point
+                    const xInput = document.getElementById('x-input');
+                    const yInput = document.getElementById('y-input');
+            
+                    function updatePoint() {
+                        const x = parseInt(xInput.value);
+                        const y = parseInt(yInput.value);
+            
+                        drawPoint(x, y);
+                    }
+            
+                    xInput.addEventListener('input', updatePoint);
+                    yInput.addEventListener('input', updatePoint);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput36', 'preview36')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput36" accept="image/*" style="display: none;">
+                <img id="preview36" alt="Vista previa de la imagen 36" height="40%" width="40%">
+            </td>
+            <td>
+                <button id="btn140" class="green-btn" value="0">V</button>
+                <button id="btn141" class="yellow-btn" value="4">N </button>
+                <button id="btn142" class="red-btn" value="6">R</button>
+                <button id="btn143" class="purple-btn" value="10">P</button>
+               </p>
+            </td>
+        </tr>
+    </table>
+
+    
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th colspan="4"><p><h1>B) Distancia horizontal entre las manos y la parte inferior de la espalda:</h1></p></th>
+            
+        </tr>
+
+        <tr>
+            <th colspan="4">
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput38', 'preview38')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput38" accept="image/*" style="display: none;">
+                <img id="preview38" alt="Vista previa de la imagen 38" height="45%" width="45%"></th>
+        </tr>
+        <tr>
+
+
+            <td><img src="./levantamiento/1.png" alt="" height="70%" width="70%" > </td>
+            <td><img src="./levantamiento/2.png" alt="" height="70%" width="70%" > </td>
+            <td><img src="./levantamiento/3.png" alt="" height="70%" width="70%" > </td>
+            <td><img src="./levantamiento/4.png" alt="" height="70%" width="70%" > </td>
+           
+        </tr>
+        <tr>
+            <td>
+
+                
+                <button id="btn144" class="green-btn" value="0">I. Los brazos se encuentran alineados verticalemente y el torso erguido</button>  
+             </td>
+ 
+             <td>
+             <button id="btn145" class="yellow-btn" value="3"> ll. Los brazos se alejan del cuerpo</button>
+                
+             </td>
+             <td>
+                 <button id="btn146" class="yellow-btn" value="3">lll. El torso se inclina hacia adelante</button>
+                
+             </td>
+             <td>
+                 <button id="btn147" class="red-btn" value="6">lv. Los brazos se inclinan hacia fuera del cuerpo y el torso se inclina hacia adelante</button>
+             </td>
+        </tr>
+    </table>
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th colspan="4"><p><h1>C) Región de levantamiento vertical:</h1></p></th>
+            
+        </tr>
+
+        <tr>
+            <th colspan="4">
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput39', 'preview39')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput39" accept="image/*" style="display: none;">
+                <img id="preview39" alt="Vista previa de la imagen 39" height="45%" width="45%">
+</th>
+        </tr>
+        <tr>
+
+
+            <td><img src="./levantamiento/5.png" alt="" height="70%" width="70%" > </td>
+            <td><img src="./levantamiento/6.png" alt="" height="70%" width="70%" > </td>
+            <td><img src="./levantamiento/7.png" alt="" height="70%" width="70%" > </td>
+            <td><img src="./levantamiento/8.png" alt="" height="70%" width="70%" > </td>
+           
+        </tr>
+        <tr>
+            <td>
+
+                
+                
+                <button id="btn148" class="green-btn" value="0">I . Por encima de la rodilla y/o por debajo de la altura del codo</button> 
+             </td>
+ 
+             <td>
+             <button id="btn149" class="yellow-btn" value="1">ll. Por debajo de la rosilla y/o por encima de la altura del codo</button>
+                
+             </td>
+             <td>
+                  <button id="btn150" class="red-btn" value="3">lll. El torso se  inclina hacia adelante</button>
+                
+             </td>
+             <td>
+                 <button id="btn151" class="red-btn" value="3">lV.Los brazos se inclinan hacia fuera del cuerpo y el torso se inclina hacia adelante</button>
+             </td>
+        </tr>
+    </table>
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <p><h1>D) Torsión y flexión lateral del torso:</h1> </p>
+            </th>
+        </tr>
+        <tr>
+            <td>
+
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput40', 'preview40')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput40" accept="image/*" style="display: none;">
+                <img id="preview40" alt="Vista previa de la imagen 40" height="300px" width="300px">
+
+
+<p>
+                <button id="btn152" class="green-btn" value="0">l. Poca o ninguna torsion o flexion lateral del torso</button>
+<button id="btn153" class="yellow-btn" value="1">ll. Torcion o flexion lateal del torso</button>
+<button id="btn154" class="red-btn" value="2">lll. Torsion y flexion lateral del torso</button>
+</p>
+
+               
+            </td>
+        </tr>
+    </table>
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <p><h1>E) Restricciones posturales:</h1></p>
+            </th>
+        </tr>
+        <tr>
+            <td>
+
+
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput41', 'preview41')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput41" accept="image/*" style="display: none;">
+                <img id="preview41" alt="Vista previa de la imagen 41" height="300px" width="300px">
+
+
+<p>
+
+                <button id="btn156" class="green-btn" value="0">l. Si los movimientos del trabajador no están obstaculizados, la banda será de color verde;</button>
+<button id="btn157" class="yellow-btn" value="1"> ll. Si el trabajador adopta posturas incómodas o forzadas durante el levantamiento de una carga debido al espacio disponible (por ejemplo, espacio estrecho entre el pallet y una tolva de descarga) o el diseño de la estación de trabajo (por ejemplo, un transportador de monorriel excesivamente alto para colocar o tomar la carga), el color de la banda será naranja</button>
+<button id="btn158" class="red-btn" value="3">lll. La postura es severamente restringida, el color de la banda será rojo (por ejemplo, trabajo en áreas confinadas como una bodega)</button>
+
+</p>
+
+            </td>
+        </tr>
+    </table>
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <p><h1> F) Acoplamiento mano-carga (elementos de sujeción):</h1></p>
+    <h4>l. geométricas y de diseño de la carga que se va a manejar, en cuanto a su interacción con las manos del trabajador, según se indica a continuación.</h4>
+            </th>
+        </tr>
+        <tr>
+            <td>
+
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput42', 'preview42')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput42" accept="image/*" style="display: none;">
+                <img id="preview42" alt="Vista previa de la imagen 42" height="300px" width="300px">
+
+
+                <p>
+                <button id="btn159" class="green-btn" value="0">Buen agarre
+                    Contenedores con elementos de sujecion como asas o manijas bien diseñados, aptos pára este proposito
+                    partes holgadas que permiten un agarrre comodo
+                    Nivel: Verde</button>
+                 <button id="btn160" class="yellow-btn" value="1">Agarre regular 
+                    contenedores con asas o manijas mal diseñadas. El material permite hacer un agarre con las mano en pinza.
+                    Los dedos deben estar sujetos a 90 grados bajo el contenedor o la carga
+                    Nivel: Naranja</button>
+                 <button id="btn161" class="red-btn" value="2">Mal agarre
+                    Contenedores de diseño deficiente, partes holgadas, objetos irregulares, voluminosos o dificiles de manejar.
+                    Sacos no rigidos(como bultos de arena o cemento) cargas impredecibles
+                    Nivel: Rojo</button>
+                </p>
+
+               
+            </td>
+        </tr>
+    </table>
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <p><h1>G) Superficie de trabajo:</h1></p>
+                <h4>I. Este factor considera las propiedades de la superficie donde el trabajador camina o permanece de pie, según se indica a continuación.</h4>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput43', 'preview43')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput43" accept="image/*" style="display: none;">
+                <img id="preview43" alt="Vista previa de la imagen 43" height="300px" width="300px">
+
+<p>
+                <button id="btn162" class="green-btn" value="0">Piso seco, limpio y en buenas condiciones de mantenimiento
+                    Nivel: Verde</button>
+                 <button id="btn163" class="yellow-btn" value="1">Piso seco, pero en malas condiciones, desgastado o irregular
+                    Nivel: Naranja</button>
+                 <button id="btn164" class="red-btn" value="2">Piso contaminado/humedo o desnivelado, superficie inestable o calzado inadecuado
+                    Nivel: Rojo</button>
+
+                </p>
+                
+            </td>
+        </tr>
+    </table>
+    
+    
+</div></div>
+
+
+
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <p><h1>H) Otros factores ambientales:</h1></p>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+                <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput44', 'preview44')">Capture la imagen de la postura a evaluar</button>
+                <input type="file" id="fileInput44" accept="image/*" style="display: none;">
+                <img id="preview44" alt="Vista previa de la imagen 44" height="300px" width="300px">
+
+
+
+<p>
+                <button id="btn165" class="green-btn" value="0">l. Si no existe ningún factor presente el color de la banda será verde</button>
+                <button id="btn167" class="yellow-btn" value="1">ll. Observar el ambiente de trabajo y calificar si la operación de levantamiento se lleva a cabo bajo: temperaturas extremas; con fuerte circulación del aire; o en condiciones de iluminación extremas (demasiado oscuro o brillante). Si uno de éstos factores de riesgo está presente el color de la banda será naranja</button>
+                <button id="btn168" class="red-btn" value="2">lll. Si dos o más factores de riesgo están presentes el color de la banda será rojo</button>
+            </p>
+
+               
+            </td>
+        </tr>
+    </table>
+    
+    
+</div></div>
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+
+    <table class="mi-tabla">
+        <tr>
+          <th colspan="3" class="encabezado-grande">RESULTADOS DE LA EVALUACIÓN</th>
+        </tr>
+        <tr>
+          <th colspan="3" class="encabezado-chico">LEVANTAMIENTO / DESCENSO DE  CARGAS </th>
+        </tr>
+        <tr>
+          <td class="columna-1">Factores de riesgo</td>
+          <td class="columna-2">Color y Valor</td>
+        </tr>
+        <tr>
+            <td class="columna-1">A) Peso de la carga y frecuencia</td>
+            <td class="columna-2">
+                <div id="mensaje140" class="mensaje"></div>
+                <div id="mensaje141" class="mensaje"></div>
+                <div id="mensaje142" class="mensaje"></div>
+                <div id="mensaje143" class="mensaje"></div>
+            
+            </td>
+        </tr>
+        <tr>
+            <td class="columna-1">B) Distancia horizontal entre las manos desde la parte inferior de la espalda</td>
+            <td class="columna-2"> 
+                <div id="mensaje144" class="mensaje"></div>
+                <div id="mensaje145" class="mensaje"></div>
+                <div id="mensaje146" class="mensaje"></div>
+                <div id="mensaje147" class="mensaje"></div>
+            </td>
+            <td rowspan="3" class="columna-3"><img src="./tablaf.png" alt=""></td>
+        </tr>
+        <tr>
+            <td class="columna-1">C) Región de levantamiento vertical</td>
+            <td class="columna-2">
+                <div id="mensaje148" class="mensaje"></div>
+                <div id="mensaje149" class="mensaje"></div>
+                <div id="mensaje150" class="mensaje"></div>
+                <div id="mensaje151" class="mensaje"></div>
+                </td>
+        </tr>
+        <tr>
+            <td class="columna-1">D) Torsión y flexión lateral del torso; Carga asimétrica sobre el torso (transporte)</td>
+            <td class="columna-2"> 
+                <div id="mensaje152" class="mensaje"></div>
+                <div id="mensaje153" class="mensaje"></div>
+                <div id="mensaje154" class="mensaje"></div></td>
+        </tr>
+        <tr>
+            <td class="columna-1">E) Restricciones posturales (posturas incómodas, forzadas, o restringidas)</td>
+            <td class="columna-2"> 
+                <div id="mensaje156" class="mensaje"></div>
+                <div id="mensaje157" class="mensaje"></div>
+                <div id="mensaje158" class="mensaje"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="columna-1">F) Acoplamiento mano-carga (elementos de sujeción)</td>
+            <td class="columna-2">
+                <div id="mensaje159" class="mensaje"></div>
+                <div id="mensaje160" class="mensaje"></div>
+                <div id="mensaje161" class="mensaje"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="columna-1">G) Superficie de trabajo</td>
+            <td class="columna-2"> 
+                <div id="mensaje162" class="mensaje"></div>
+                <div id="mensaje163" class="mensaje"></div>
+                <div id="mensaje164" class="mensaje"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="columna-1">H) Otros factores ambientales</td>
+            <td class="columna-2"> 
+                <div id="mensaje165" class="mensaje"></div>
+                <div id="mensaje168" class="mensaje"></div>
+                <div id="mensaje167" class="mensaje"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="columna-1">Puntuación</td>
+            <td class="columna-2"><div id="sum-message5"></div>
+                
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="columna-1">Nivel de Riesgo</td>
+            <td class="columna-2"><div id="result-section5" style="display: none;">
+                <div id="result5"></div>
+                
+                </div>
+            </td>
+        </tr>
+      </table>
+      
+
+
+
+
+
+
+      <button id="calculate-btn">Calcular</button>
+
+      <button id="download">Descargar PDF</button>
+
+
+
+
+</div></div>
+
+
+</div>
+
+
+    
+
+<script>
+    function hideButton() {
+        var btn = document.getElementById('calculate-btn5');
+        btn.style.display = 'none'; // Oculta el botón
+    }
+</script>
+<script>
+    function mostrarImagen(button, inputId, previewId) {
+        var input = document.getElementById(inputId);
+        var preview = document.getElementById(previewId);
+    
+        input.onchange = function () {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    button.style.display = 'none'; // Ocultar el botón específico después de seleccionar la imagen
+                };
+    
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+    
+        input.click(); // Simular clic en el input file
+    }
+    </script>
+
+
+<script>
+    const signatureCanvas = document.getElementById('signature-pad');
+    const signatureCtx = signatureCanvas.getContext('2d');
+    let drawing = false;
+
+    signatureCanvas.addEventListener('mousedown', () => {
+        drawing = true;
+        signatureCtx.beginPath();
+    });
+
+    signatureCanvas.addEventListener('mouseup', () => {
+        drawing = false;
+    });
+
+    signatureCanvas.addEventListener('mousemove', (event) => {
+        if (!drawing) return;
+        const rect = signatureCanvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        signatureCtx.lineTo(x, y);
+        signatureCtx.stroke();
+    });
+
+    document.getElementById('clear-button').addEventListener('click', () => {
+        signatureCtx.clearRect(0, 0, signatureCanvas.width, signatureCanvas.height);
+    });
+
+    document.getElementById('save-button').addEventListener('click', () => {
+        const dataURL = signatureCanvas.toDataURL();
+        console.log('Imagen guardada:', dataURL);
+        // Aquí puedes agregar el código para enviar la imagen a un servidor o guardarla
+    });
+</script>
+
+<script>
+    function mostrarImagen(button, inputId, previewId) {
+        var input = document.getElementById(inputId);
+        var preview = document.getElementById(previewId);
+    
+        input.onchange = function () {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    button.style.display = 'none'; // Ocultar el botón específico después de seleccionar la imagen
+                };
+    
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+    
+        input.click(); // Simular clic en el input file
+    }
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('[id^="btn"]').forEach(button => {
+            const btnId = parseInt(button.id.slice(3));
+            if (btnId >= 140 && btnId <= 168) {
+              button.addEventListener('click', function () {
+                const questionIndex = parseInt(this.id.slice(3));
+                const buttons = document.querySelectorAll(`[id^="btn${questionIndex}"]`);
+                if (this.classList.contains('selected')) {
+                  this.classList.remove('selected');
+                } else {
+                  buttons.forEach(btn => {
+                    btn.classList.remove('selected');
+                  });
+                  this.classList.add('selected');
+                }
+              });
+            }
+          });
+    
+          document.getElementById('calculate-btn').addEventListener('click', function () {
+            calcularResultado();
+            document.getElementById('recalculate-btn5').style.display = 'block';
+          });
+    
+          document.getElementById('recalculate-btn5').addEventListener('click', function () {
+            calcularResultado();
+          });
+    
+          function calcularResultado() {
+            const buttonIds = [];
+            for (let i = 140; i <= 168; i++) {
+              buttonIds.push('btn' + i);
+            }
+    
+            let total = 0;
+            let selectedValues = [];
+            buttonIds.forEach(id => {
+              const button = document.getElementById(id);
+              if (button && button.classList.contains('selected')) {
+                const value = parseInt(button.value);
+                total += value;
+                selectedValues.push(value);
+              }
+            });
+    
+            const resultMessage = document.getElementById('result5');
+            if (total <= 4) {
+              resultMessage.innerText = 'Resultado: Aceptable';
+              resultMessage.style.backgroundColor = 'lightgreen';
+            } else if (total <= 12) {
+              resultMessage.innerText = 'Resultado: Posible';
+              resultMessage.style.backgroundColor = 'yellow';
+            } else if (total <= 20) {
+              resultMessage.innerText = 'Resultado: Significativo';
+              resultMessage.style.backgroundColor = 'red';
+            } else {
+              resultMessage.innerText = 'Resultado: Inaceptable';
+              resultMessage.style.backgroundColor = 'purple';
+            }
+    
+            const resultSection = document.getElementById('result-section5');
+            resultSection.style.display = 'block';
+    
+            const sumMessage = document.getElementById('sum-message5');
+            sumMessage.innerText = `Suma de valores seleccionados: ${total}`;
+    
+            const sumSection = document.getElementById('sum-section5');
+            sumSection.style.display = 'block';
+            sumSection.className = '';
+            sumSection.classList.add('sum-section-' + total);
+            if (total <= 4) {
+              sumSection.classList.add('fondo-verde');
+            } else if (total <= 12) {
+              sumSection.classList.add('fondo-amarillo');
+            } else if (total <= 20) {
+              sumSection.classList.add('fondo-rojo');
+            } else {
+              sumSection.classList.add('fondo-morado');
+            }
+    
+            document.getElementById('calculate-btn5').style.display = 'none';
+          }
+        });
+    
+        function mostrarMensaje(btnId, mensaje) {
+          var mensajeDiv = document.getElementById("mensaje" + btnId.slice(3));
+          if (mensajeDiv.innerText === mensaje) {
+            mensajeDiv.innerText = '';
+            mensajeDiv.style.backgroundColor = '';
+            mensajeDiv.classList.remove('texto-blanco');
+          } else {
+            mensajeDiv.innerText = mensaje;
+            mensajeDiv.style.backgroundColor = '';
+            if (btnId === 'btn140' || btnId === 'btn144' || btnId === 'btn148' || btnId === 'btn152' || btnId === 'btn156' || btnId === 'btn159' || btnId === 'btn162' || btnId === 'btn165' ) {
+              mensajeDiv.style.backgroundColor = 'lightgreen';
+            } else if (btnId === 'btn141' || btnId === 'btn145' || btnId === 'btn146' || btnId === 'btn149' || btnId === 'btn153' || btnId === 'btn157' || btnId === 'btn160' || btnId === 'btn163' || btnId === 'btn167') {
+              mensajeDiv.style.backgroundColor = 'yellow';
+            } else if (btnId === 'btn142' || btnId === 'btn147' || btnId === 'btn150' || btnId === 'btn151' || btnId === 'btn154' || btnId === 'btn158' || btnId === 'btn161' || btnId === 'btn164' || btnId === 'btn168') {
+              mensajeDiv.style.backgroundColor = 'crimson';
+              mensajeDiv.classList.add('texto-blanco');
+            } else if (btnId === 'btn143') {
+              mensajeDiv.style.backgroundColor = 'purple';
+              mensajeDiv.classList.add('texto-blanco');
+            }
+          }
+        }
+    
+        // Asignación de eventos a los botones
+        document.getElementById("btn140").addEventListener("click", function() {
+          mostrarMensaje("btn140", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn141").addEventListener("click", function() {
+          mostrarMensaje("btn141", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn142").addEventListener("click", function() {
+          mostrarMensaje("btn142", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn143").addEventListener("click", function() {
+          mostrarMensaje("btn143", "Has seleccionado Nivel morado");
+        });
+    
+        document.getElementById("btn144").addEventListener("click", function() {
+          mostrarMensaje("btn144", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn145").addEventListener("click", function() {
+          mostrarMensaje("btn6145", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn146").addEventListener("click", function() {
+          mostrarMensaje("btn146", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn147").addEventListener("click", function() {
+          mostrarMensaje("btn147", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn148").addEventListener("click", function() {
+          mostrarMensaje("btn148", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn149").addEventListener("click", function() {
+          mostrarMensaje("btn149", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn150").addEventListener("click", function() {
+          mostrarMensaje("btn150", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn151").addEventListener("click", function() {
+          mostrarMensaje("btn151", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn152").addEventListener("click", function() {
+          mostrarMensaje("btn152", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn153").addEventListener("click", function() {
+          mostrarMensaje("btn153", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn154").addEventListener("click", function() {
+          mostrarMensaje("btn154", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn156").addEventListener("click", function() {
+          mostrarMensaje("btn156", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn157").addEventListener("click", function() {
+          mostrarMensaje("btn157", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn158").addEventListener("click", function() {
+          mostrarMensaje("btn158", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn159").addEventListener("click", function() {
+          mostrarMensaje("btn159", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn160").addEventListener("click", function() {
+          mostrarMensaje("btn160", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn161").addEventListener("click", function() {
+          mostrarMensaje("btn161", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn162").addEventListener("click", function() {
+          mostrarMensaje("btn162", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn163").addEventListener("click", function() {
+          mostrarMensaje("btn163", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn164").addEventListener("click", function() {
+          mostrarMensaje("btn164", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn165").addEventListener("click", function() {
+          mostrarMensaje("btn165", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn167").addEventListener("click", function() {
+          mostrarMensaje("btn167", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn168").addEventListener("click", function() {
+          mostrarMensaje("btn168", "Has seleccionado Nivel rojo");
+        });
+      </script>
+    
+    
+    <script>
+        document.getElementById('download').addEventListener('click', function() {
+            var element = document.body;
+            var downloadButton = document.getElementById('download');
+            var calculateButton = document.getElementById('calculate-btn');
+
+            // Ocultar los botones antes de generar el PDF
+            downloadButton.style.display = 'none';
+            calculateButton.style.display = 'none';
+
+            // Solicitar el nombre del archivo al usuario
+            var fileName = prompt("Por favor, ingrese el nombre del archivo:", "mi-pdf");
+
+            // Verificar si el usuario ha ingresado un nombre
+            if (fileName) {
+                // Configuración del tamaño del PDF y márgenes negativos
+                var options = {
+                    margin: [-4.3, -4.3, -4.3, -4.3], // márgenes negativos en milímetros (top, right, bottom, left)
+                    filename: fileName + '.pdf', // Nombre del archivo ingresado por el usuario
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 }, // Ajustar la escala para mejorar la calidad de imagen
+                    jsPDF: { unit: 'mm', format: [215.9, 305.1], orientation: 'portrait' } // Tamaño en mm
+                };
+
+                html2pdf().from(element).set(options).save().then(() => {
+                    // Mostrar los botones después de que se haya generado el PDF
+                    downloadButton.style.display = 'block';
+                    calculateButton.style.display = 'block';
+                });
+            } else {
+                alert("Debe ingresar un nombre para el archivo.");
+                // Mostrar los botones si no se ingresó un nombre
+                downloadButton.style.display = 'block';
+                calculateButton.style.display = 'block';
+            }
+        });
+    </script>
+    <script>
+        document.getElementById('download').addEventListener('click', function() {
+            // Aquí puedes añadir la lógica para descargar el PDF
+            // ...
+    
+            // Luego, enviar un mensaje al script principal para cambiar a la siguiente página después de 10 segundos
+            window.parent.postMessage('nextPage', '*');
+        });
+    </script>
+<script src="./hoja.js"></script>
+<script src="./funcion.js"></script>
+<script src="./prueba.js"></script>
+
+
+
+</body>
+</html>

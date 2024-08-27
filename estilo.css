@@ -1,0 +1,356 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #f4f4f4;
+    width: 100%;
+
+}
+
+#survey-container {
+    background-color: #fff;
+    padding: 5px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+}
+#informacion-text{
+    width: 80%;
+    text-align: left;
+    padding-left: 74px;
+    
+}
+#informacion-pic{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Altura completa de la ventana */
+    
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre elementos */
+    margin-bottom: 15px;
+    height: 50%;
+    width: 50%;
+}
+
+/* Estilos de imagen */
+.contenedor img {
+    width: 100%; /* Esto puede ajustarse según tus necesidades */
+    height: 100%; /* Altura automática para mantener la proporción */
+}
+
+/* Estilos de botones */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd; /* Borde inicial gris claro */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    background-color: #fff; /* Fondo blanco inicial */
+    color: #333; /* Texto negro inicial */
+    margin-bottom: 10px;
+}
+
+
+/* Estilos de canvas */
+
+.graph {
+    
+    background-image: url('./grafica.png');
+    background-size: 485px 280px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 300px;
+}
+
+/* Estilos de sección */
+#question-section {
+    width: 100%;
+    text-align: left; /* Alineación de texto de izquierda a derecha */
+    padding: 10px;
+}
+
+/* Estilos de puntos */
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+button.selected .dot {
+    background-color: white;
+}
+#informacion1 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#selectButton {
+    display: block;
+    margin: 20px auto;
+}
+#preview8 {
+    display: block;
+    margin: 20px auto;
+}
+#nombredelaempresa {
+    border: none;
+   
+    font-size: 16px;
+    width: 500px;
+    word-wrap: break-word; /* Permite dividir el texto en varias líneas */
+    text-align: center;
+    color: red;
+    font-size: 17px;
+}
+
+#texto {
+    color: red;
+}
+#direcion {
+    border: none;
+    
+    font-size: 16px;
+    width: 500px;
+    word-wrap: break-word; /* Permite dividir el texto en varias líneas */
+    text-align: center;
+    color: red;
+    font-size: 15px;
+}
+
+
+#localidad {
+    border: none;
+    
+    font-size: 16px;
+    width: 500px;
+    word-wrap: break-word; /* Permite dividir el texto en varias líneas */
+    text-align: center;
+    color: red;
+    font-size: 13px;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  table {
+    width: 100%;
+    
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  th, td {
+    padding: 2px; /* Reduce el padding para hacer las celdas más pequeñas */
+    text-align: left;
+    
+    
+    
+  }
+  #descripcion{
+   width: 100%;
+   height: 100%;
+  }
+  #actividadTextarea{
+    width: 100%;
+    height: 100%;
+   }
+   #informacion-textt{
+    width: 80%;
+    text-align: left;
+    padding-left: 74px;
+    font-size: 10px;
+    
+}
+
+
+
+#nivelVerde {
+    background-color: green;
+}
+
+#nivelNaranja {
+    background-color: orange;
+}
+
+#nivelRojo {
+    background-color: red;
+}
+
+#nivelMorado {
+    background-color: purple;
+}
+
+.white-btn {
+    background-color: white;
+    color: black;
+}
+#result {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.genero {
+    margin-right: 8px;
+}
+form {
+    width: 20%;
+    padding: 10px;
+    text-align: left;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #f4f4f4;
+    width: 100%;
+}
+
+
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}.dot {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}button.selected .dot {
+    background-color: white;
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .page {
+    width: 210mm; /* Ancho de una hoja A4 */
+    height: 297mm; /* Alto de una hoja A4 */
+    margin: 20px auto; /* Margen para separar las páginas */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .mi-tabla {
+    border-collapse: collapse;
+  }
+  
+  .mi-tabla th, .mi-tabla td {
+
+    padding: 8px;
+  }
+  
+  .columna-1, .columna-3 {
+    width: 40%; /* Anchura del 40% para las columnas 1 y 3 */
+  }
+  
+  .columna-2 {
+    width: 20%; /* Anchura del 20% para la columna 2 */
+  }
+  .encabezado-grande {
+    font-size: 18px; /* Tamaño de texto grande */
+    background-color: aqua;
+  }
+  
+  .encabezado-chico {
+    font-size: 14px; /* Tamaño de texto pequeño */
+  }
+
+  .fondo-verde { background-color: lightgreen; }
+  .fondo-naranja { background-color: yellow; }
+  .fondo-rojo { background-color: crimson; }
+  .fondo-morado { background-color: purple; }
+  /* Añadir más estilos de colores según sea necesario */
+
+  /* Estilo para cambiar el color de texto a blanco */
+  .texto-blanco {
+    color: white !important; /* Asegura que el color blanco tenga prioridad */
+  }
+
+  
+
+/* Estilos para botones seleccionados */
+.green-btn.selected {
+    background-color: green;
+    color: white;
+}
+.yellow-btn.selected {
+    background-color: yellow;
+    color: black;
+}
+.red-btn.selected {
+    background-color: red;
+    color: white;
+}
+.purple-btn.selected {
+    background-color: purple;
+    color: white;
+}
+
+
+.white-btn.selected {
+    background-color: black;
+    color: white;
+}

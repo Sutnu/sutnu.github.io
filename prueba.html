@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Páginas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #menu {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: 2px solid #ccc;
+            display: none; /* Ocultamos el iframe inicialmente */
+        }
+        #menuButton, #pdfButton {
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Estilos específicos para cada botón */
+        #menuButton {
+            background-color: #ff0000;
+        }
+
+        #pdfButton {
+            background-color: #ff0000;
+        }
+
+        /* Estilos para los menús */
+        #menu, #pdfOptions {
+            position: absolute;
+            top: 50px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        /* Ajustes para el menú de opciones PDF */
+        #pdfOptions {
+            top: 100px; /* Ajusta la posición vertical para que no se superponga */
+        }
+    </style>
+  
+</head>
+<body>
+
+
+
+    <button id="menuButton">Menú</button>
+    <button id="pdfButton">Opciones PDF</button>
+    <!-- Menú para especificar cuántas veces abrir cada página -->
+    <div id="menu">
+        <label for="page1Count">Abrir Portada:</label>
+        <input type="number" id="page1Count" min="0" value="1"> veces<br><br>
+
+        <label for="page2Count">Abrir Levantamiento:</label>
+        <input type="number" id="page2Count" min="0" value="1"> veces<br><br>
+
+        <label for="page3Count">Abrir Cargas en equipo:</label>
+        <input type="number" id="page3Count" min="0" value="1"> veces<br><br>
+
+        <label for="page4Count">Abrir Cargas y transporte:</label>
+        <input type="number" id="page4Count" min="0" value="1"> veces<br><br>
+
+        <label for="page5Count">Abrir Empujar o jalar:</label>
+        <input type="number" id="page5Count" min="0" value="1"> veces<br><br>
+
+        <label for="page6Count">Abrir Empuje o arrastre:</label>
+        <input type="number" id="page6Count" min="0" value="1"> veces<br><br>
+
+        <label for="page7Count">Abrir concluciones:</label>
+        <input type="number" id="page7Count" min="0" value="1"> veces<br><br>
+
+        <button onclick="openPages()">Abrir Páginas</button>
+    </div>
+    <div id="pdfOptions">
+        <label for="fileInput">Subir archivos PDF:</label><br>
+        <input type="file" id="fileInput" multiple accept="application/pdf"><br><br>
+
+        <label for="pdfName">Nombre del archivo combinado:</label><br>
+        <input type="text" id="pdfName" placeholder="Nombre del archivo"><br><br>
+
+        Favor de sleccionarlos del primero al ultimo
+
+        <button onclick="combinePDFs()">Combinar PDFs</button>
+    </div>
+    <!-- Aquí está el iframe donde se cargarán las páginas -->
+    <iframe id="content" src=""></iframe> 
+
+    <script>
+        // Mostrar el menú al hacer clic en el botón
+        document.getElementById('menuButton').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+
+        // Ocultar el menú cuando el cursor sale del área del menú
+        document.getElementById('menu').addEventListener('mouseleave', function() {
+            this.style.display = 'none';
+        });
+    </script>
+    <script>
+        
+        let currentPageIndex = 0;
+        let pages = [];
+    
+        // Función para configurar cuántas veces abrir cada página
+        function openPages() {
+            pages = [];
+    
+            const page1Count = parseInt(document.getElementById('page1Count').value);
+            const page2Count = parseInt(document.getElementById('page2Count').value);
+            const page3Count = parseInt(document.getElementById('page3Count').value);
+            const page4Count = parseInt(document.getElementById('page4Count').value);
+            const page5Count = parseInt(document.getElementById('page5Count').value);
+            const page6Count = parseInt(document.getElementById('page6Count').value);
+            const page7Count = parseInt(document.getElementById('page7Count').value);
+    
+            for (let i = 0; i < page1Count; i++) pages.push('portada.html');
+            for (let i = 0; i < page2Count; i++) pages.push('levantamiento.html');
+            for (let i = 0; i < page3Count; i++) pages.push('cargas en equipo.html');
+            for (let i = 0; i < page4Count; i++) pages.push('cargas y transporte.html');
+            for (let i = 0; i < page5Count; i++) pages.push('empujar o jalar.html');
+            for (let i = 0; i < page6Count; i++) pages.push('empuje o arrastra.html');
+            for (let i = 0; i < page7Count; i++) pages.push('concluciones.html');
+    
+            // Iniciamos con la primera página si hay alguna en la lista
+            if (pages.length > 0) {
+                currentPageIndex = 0;
+                loadPage(pages[currentPageIndex]);
+            }
+        }
+    
+        // Función para cargar la página en el iframe
+        function loadPage(page) {
+            const iframe = document.getElementById('content');
+            iframe.src = page;
+            iframe.style.display = 'block';
+        }
+    
+        // Función para cambiar a la siguiente página
+        function nextPage() {
+            currentPageIndex++;
+            if (currentPageIndex < pages.length) {
+                loadPage(pages[currentPageIndex]);
+            } else {
+                closeIframe(); // Cerrar si no hay más páginas
+            }
+        }
+    
+        // Función para cerrar el iframe
+        function closeIframe() {
+            const iframe = document.getElementById('content');
+            iframe.style.display = 'none';
+            iframe.src = '';
+        }
+    
+        // Listener para recibir mensajes del iframe
+        window.addEventListener('message', function(event) {
+            if (event.data === 'nextPage') {
+                // Retrasar el cambio de página por 10 segundos
+                setTimeout(() => {
+                    nextPage();
+                }, 10000); // 10 segundos
+            }
+        });
+    </script>
+        <script>
+            async function combinePDFs() {
+                const fileInput = document.getElementById('fileInput');
+                const pdfName = document.getElementById('pdfName').value || "combined";
+    
+                if (fileInput.files.length === 0) {
+                    alert('Por favor, selecciona al menos un archivo PDF.');
+                    return;
+                }
+    
+                const pdfDoc = await PDFLib.PDFDocument.create();
+    
+                for (let file of fileInput.files) {
+                    const arrayBuffer = await file.arrayBuffer();
+                    const loadedPdf = await PDFLib.PDFDocument.load(arrayBuffer);
+                    const copiedPages = await pdfDoc.copyPages(loadedPdf, loadedPdf.getPageIndices());
+                    
+                    copiedPages.forEach((page) => {
+                        pdfDoc.addPage(page);
+                    });
+                }
+    
+                const pdfBytes = await pdfDoc.save();
+                download(pdfBytes, `${pdfName}.pdf`, "application/pdf");
+            }
+    
+            function download(data, filename, type) {
+                const blob = new Blob([data], { type: type });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                }, 0);
+            }
+    
+            // Mostrar el menú al hacer clic en el botón
+            document.getElementById('pdfButton').addEventListener('click', function() {
+                const menu = document.getElementById('pdfOptions');
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            });
+    
+            // Ocultar el menú cuando el cursor sale del área del menú
+            document.getElementById('pdfOptions').addEventListener('mouseleave', function() {
+                this.style.display = 'none';
+            });
+        </script>
+</body>
+</html>

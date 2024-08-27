@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+   
+    <style>
+    
+    .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .signature-pad {
+            width: 300px;
+            height: 150px;
+        background-color: rgb(182, 182, 182);
+            margin-bottom: 10px;
+        }
+        .date-box {
+            border-radius: 0px;
+    font-family: Arial, sans-serif;
+}
+
+.date-box label {
+    font-weight: bold;
+}
+
+#date-input {
+    padding: 5px;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    color: red;
+}
+.input-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: center
+            ;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 8px;
+            border: 0px solid #ccc;
+            text-align: center;
+        }
+        table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 25%;
+    height: 10px; /* Puedes ajustar la altura según tus necesidades */
+    border: opx;
+    text-align: left;
+    vertical-align: top; /* Alinea el contenido a la parte superior */
+    padding: 1px; /* Opcional: Añade padding para separar el contenido del borde */
+}
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .form-row label {
+            margin-bottom: 5px;
+        }
+        .form-row textarea {
+            width: 100%;
+            height: 100px; /* Puedes ajustar este tamaño según tus necesidades */
+            resize: none; /* Esto deshabilita el redimensionamiento */
+        }
+        button {
+    display: block;
+    text-align: left;
+    margin: 0;
+  padding-top: 15px;
+  padding: 15px;
+}
+        </style>
+
+
+    <title>Portada
+    </title>
+
+</head>
+
+
+<body>
+   
+       
+    <div class="page">
+            
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+
+   
+
+    <div style="text-align: center;">
+            
+          
+          
+          
+        <h4>Reporte de Resultados, Evaluación</h4>
+        <h2>NORMA OFICIAL MEXICANA NOM-036-1-STPS-2018,
+            FACTORES DE RIESGO ERGONÓMICO EN EL TRABAJOIDENTIFICACIÓN, ANÁLISIS, PREVENCIÓN Y CONTROL.</h2>
+            <div style="text-align: center;">
+                <button id="selectButton1" class="selectButton" onclick="mostrarImagen(this, 'fileInput8', 'preview8')">Seleccionar imagen 1</button>
+                <input type="file" id="fileInput8" accept="image/*" style="display: none;" onchange="mostrarImagen(this, 'preview8')">
+            <img id="preview8" alt="Vista previa de la imagen 1" height="400px" width="400px">
+            </div>
+              
+
+
+        <h4>Elaborado para:</h4>
+       <input type="text" id="nombredelaempresa" name="nombredelaempresa" required="" placeholder="Agregar nombre de la empresa">
+       <input type="text" id="direcion" name="direcion" required="" placeholder="Agregar direcion de la empresa">
+       <input type="text" id="localidad" name="localidad" required="" placeholder="Agregar la localidad de la empresa">
+       <div class="date-box">
+        <input type="date" id="date-input" name="date-input"></div>
+   
+          
+          
+    </div></div>
+
+
+    <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+       <h4>·OBJETIVO DE LA NORMA:</h4>
+       Establecer los elementos para identificar, analizar, prevenir y controlar los factores de riesgo
+       ergonómico en los centros de trabajo derivados del manejo manual de cargas, a efecto de
+       prevenir alteraciones a la salud de los trabajadores.
+       <h4>·CAMPO DE APLICACIÓN:</h4>
+       La presente Norma Oficial Mexicana rige en todo el territorio nacional y aplica en todos los
+centros de trabajo donde existan trabajadores cuya actividad implique realizar manejo
+manual de cargas de forma cotidiana (más de una vez al día).
+<p></p>2.1 Esta Norma no aplica en actividades de manejo manual de cargas menores a 3 kg<p></p>
+<h4>·DEFINICIONES:</h4>
+Para efectos de esta Norma, se consideran las definiciones siguientes:
+<p></p>4.1 Autoridad laboral: Las unidades administrativas competentes de la Secretaría del
+Trabajo y Previsión Social que realizan funciones de inspección y vigilancia en materia de
+seguridad y salud en el trabajo, y las correspondientes de las entidades federativas, que
+actúen en auxilio de aquéllas.
+<p></p><p>4.2 Centro de trabajo: El lugar o lugares, tales como edificios, locales, instalaciones y áreas,
+donde se realicen actividades de explotación, aprovechamiento, producción,
+comercialización, transporte y almacenamiento o prestación de servicios, en los que laboren
+personas que estén sujetas a una relación de trabajo.
+</p><p>4.3 Condiciones inseguras: Aquéllas que derivan de la inobservancia o desatención de los
+procedimientos o medidas de seguridad, y que pueden conllevar la ocurrencia de incidentes,
+accidentes y enfermedades de trabajo o daños materiales al centro de trabajo.
+</p><p>4.4 Diagnóstico de seguridad y salud en el trabajo: La identificación de las condiciones
+inseguras o peligrosas; de los agentes físicos, químicos o biológicos o de los factores de
+riesgo ergonómico o psicosocial capaces de modificar las condiciones del ambiente laboral;
+de los peligros circundantes al centro de trabajo, así como de los requerimientos normativos
+en materia de seguridad y salud en el trabajo que resulten aplicables.
+</p></div></div>
+
+<div class="page">
+<img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+<p>4.5 Empujar, jalar o arrastrar (tracción) cargas: Aquellas actividades o tareas en las que
+se empuja o arrastra una carga, en forma manual, con o sin la ayuda de equipos auxiliares,
+en donde la dirección de la fuerza resultante fundamental es horizontal. Durante la tracción,
+la fuerza es dirigida hacia el cuerpo y en el empuje, se aleja del cuerpo.
+</p><p>4.6 Equipos auxiliares: Los vehículos de una, dos o más ruedas, sin locomoción propia, que
+se utilizan como apoyo para la carga manual en el transporte de material a granel o
+empaquetado a distancias relativamente cortas, que son soportados parcialmente y/o
+impulsados por los trabajadores. Para efectos de esta Norma, quedan incluidos como tales
+las carretillas, diablos y patines, entre otros.
+</p><p>4.7 Estibar: La acción de apilar materiales o contenedores uno encima de otro, de forma
+ordenada, a nivel del piso, en tarimas, estructuras o plataformas.
+</p><p>4.8 Estimación simple del nivel de riesgo; Evaluación rápida: La valoración inicial de las
+condiciones en que se realiza el manejo manual de cargas, a fin de identificar en forma
+cualitativa, el nivel de riesgo al que están expuestos los trabajadores.
+</p><p>4.9 Evaluación específica del nivel de riesgo: Aquella evaluación de los factores de riesgo
+ergonómico para determinar la magnitud del riesgo derivado de las actividades o tareas de
+manejo manual de cargas, haciendo uso de métodos que permiten realizar una valoración
+del riesgo detallada de las condiciones en las que se desarrollan las actividades, tales como:
+método de levantamiento simple de cargas; método de levantamiento compuesto de cargas;
+método de levantamiento variable; método de la ecuación de NIOSH, o método de evaluación
+de actividades para empujar o jalar cargas de acuerdo con la norma ISO-11228-2:2007, entre
+otros métodos científicamente validados.
+</p><p>4.10 Fatiga; Fatiga de trabajo: La manifestación mental o física, local o general nopatológica de sobre esfuerzo físico o esfuerzo excesivo, completamente reversible con el
+descanso.
+</p><p>4.11 Factores de riesgo ergonómico: Aquéllos que pueden conllevar sobre esfuerzo físico,
+movimientos repetitivos o posturas forzadas en el trabajo desarrollado, con la consecuente
+fatiga, errores, accidentes y enfermedades de trabajo, derivado del diseño de las
+instalaciones, maquinaria, equipo, herramientas o puesto de trabajo.
+</p></div></div>
+
+<div class="page">
+<img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+
+
+<p>4.12 Levantar y bajar cargas: Aquellas actividades o tareas realizadas de forma manual,
+sin ayuda de maquinaria, que producen un momento-fuerza sobre la columna vertebral, y/o
+extremidades superiores e inferiores, sin importar la dirección. En el levantamiento la fuerza
+se realiza contra la gravedad y, a favor de ella, al bajar la carga.
+</p><p>4.13 Trastorno músculo-esquelético laboral: Aquella lesión y enfermedad del sistema
+osteomuscular y del tejido conjuntivo causadas por la exposición laboral a factores de riesgo
+ergonómico.
+</p><p>4.14 Manejo manual de cargas; Carga manual: La actividad que desarrolla uno o varios
+trabajadores para levantar, bajar, empujar, jalar, transportar y/o estibar materiales,
+empleando su fuerza física utilizando o no equipo auxiliar. Se considera como carga aquélla
+con una masa mayor o igual a 3 kg.
+</p><p>4.15 Maquinaria: El conjunto de máquinas, vehículos o equipos que se emplean para
+levantar, bajar, jalar, trasladar, transportar y/o estibar materiales. Para efectos de la presente
+Norma, quedan incluidos como tales los polipastos, malacates, montacargas, grúas,
+transportadores, cargadores frontales o una combinación de éstos.
+</p><p>4.16 Medidas de control: Aquellas medidas de prevención y/o corrección de naturaleza
+técnica o administrativa que se adoptan para reducir o eliminar el sobre esfuerzo físico por el
+trabajo desarrollado.
+</p><p>4.17 Modo seguro; manera segura: La realización de actividades cumpliendo con los
+procedimientos y medidas de seguridad determinadas por las normas oficiales mexicanas y
+las dispuestas por el patrón.
+</p><p>4.18 Nivel de riesgo: La jerarquización de la probabilidad de que ocurra un daño.
+</p><p>4.19 Personal ocupacionalmente expuesto: Aquellos trabajadores que en ejercicio y con
+motivo de su ocupación están expuestos a factores de riesgo ergonómico, derivados de la
+ejecución de actividades que involucren manejo manual de cargas.
+</p><p>4.20 Período de descanso: El tiempo que se otorga después de realizar una actividad o
+entre un grupo de actividades de manejo manual de cargas (el tiempo se calcula en minutos).
+</p></div></div>
+
+<div class="page">
+<img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+<p>4.21 Período de recuperación: El tiempo que permite la restauración de la función músculo
+esquelética del trabajador, y que se otorga cuando existen evidencias que denotan una
+afectación de la salud del trabajador debido al manejo manual de cargas o cuando se
+presenta un trastorno músculo-esquelético laboral.
+</p><p>4.22 Riesgo: La correlación de la peligrosidad de uno o varios factores y la exposición de los
+trabajadores con la posibilidad de causar efectos adversos para su vida, integridad física o
+salud, o dañar al centro de trabajo.
+</p><p>4.23 Servicios Preventivos de Seguridad y Salud en el Trabajo: Aquéllos prestados por
+personal capacitado, ya sea interno, externo o mixto, cuyo propósito principal es prevenir los
+accidentes y enfermedades de trabajo, mediante el cumplimiento de la normativa en materia
+de seguridad y salud en el trabajo. Se entiende por internos, los proporcionados por el patrón
+o personal del centro de trabajo; externos, los prestados por personal independiente al centro
+de trabajo, y mixtos, los proporcionados tanto por personal interno como por personal
+independiente al centro de trabajo.
+</p><p>4.24 Sobre esfuerzo físico: La consecuencia de aplicar una fuerza que supera la capacidad
+del trabajador, excediendo los límites de fuerza, frecuencia, duración y/o postura, para
+realizar carga manual (levantar, bajar, empujar, jalar, transportar y/o estibar materiales) y que
+puede provocar un trastorno músculo-esquelético laboral.
+</p><p>4.25 Transportar cargas: Aquellas actividades o tareas que consisten en mover una carga
+horizontalmente mientras se sostiene únicamente mediante la fuerza humana (de forma
+manual).
+</p><p>4.26 Vigilancia a la salud de los trabajadores: La actividad sistemática realizada por el
+médico, cuya finalidad es verificar las condiciones de salud del personal al inicio de su vida
+laboral, a fin de determinar si existe algún impedimento para desempeñar el puesto, así como
+vigilar periódicamente si su salud ha sufrido alteraciones que requieran una nueva valoración
+para continuar desempeñando sus actividades.</p></div></div>
+
+
+<div class="page">
+<img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+
+<h4>·5.OBLIGACIONES DEL PATRON:</h4>
+<p>5.1 Contar con el análisis de los factores de riesgo ergonómico debido al manejo manual de
+cargas, con base en lo dispuesto por el Capítulo 7 de la presente Norma.
+</p><p>5.2 Adoptar medidas de prevención y/o control para reducir o eliminar los factores de riesgo
+ergonómico en el centro de trabajo debido al manejo manual de cargas, de acuerdo con lo
+establecido por el Capítulo 8 de esta Norma.
+</p><p>5.3 Efectuar la vigilancia a la salud de los trabajadores ocupacionalmente expuestos
+conforme a lo dispuesto por el Capítulo 9 de la presente Norma.
+</p><p>5.4 Informar a los trabajadores sobre las posibles alteraciones a la salud por el manejo
+manual de cargas.
+</p><p>5.5 Proporcionar capacitación y adiestramiento al personal ocupacionalmente expuesto
+sobre los procedimientos de seguridad y las prácticas de trabajo seguro, y en su caso, en
+las medidas de prevención y/o control, de conformidad con lo señalado por el Capítulo 10
+de esta Norma.
+</p><p>5.6 Llevar los registros sobre las medidas preventivas adoptadas y los exámenes médicos
+practicados.</p>
+<h4>·6.OBLIGACIONES DE LOS TRABAJADORES:</h4>
+<p>6.1 Observar las medidas de prevención y/o control, así como los procedimientos de
+seguridad y las prácticas de trabajo seguro que dispone esta Norma, y/o que establezca el
+patrón para la prevención de riesgos.
+</p><p>6.2 Dar aviso de inmediato al patrón y/o a la comisión de seguridad e higiene sobre las
+condiciones inseguras que adviertan durante el desarrollo de sus actividades.
+</p><p>6.3 Mantener ordenados, limpios y libres de obstáculos sus lugares de trabajo y áreas
+comunes.
+</p><p>6.4 Desempeñar su trabajo de manera segura para evitar riesgos.
+</p></div></div>
+
+
+<div class="page">
+<img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+
+
+<p>6.5 Participar en la capacitación, adiestramiento y eventos de información que proporcione
+el patrón.
+</p><p>6.6 Informar al patrón sobre las afectaciones a su salud o sus posibles limitaciones para la
+realización de sus actividades.
+</p><p>6.7 Cumplir con someterse a los exámenes médicos que determinan la presente Norma y/o
+el médico de la empresa conforme a lo dispuesto en el Capítulo 9 de la presente Norma.</p>
+<h4>APENDICE I</h4>
+<h4>ESTIMACIÓN DEL RIESGO POR EL LEVANTAMIENTO Y TRANSPORTE DE CARGAS, Y
+OPERACIONES DE CARGA MANUAL EN GRUPO DE TRABAJO</h4>
+La estimación del riesgo ergonómico por el levantamiento y transporte manual de cargas
+para evaluar las condiciones en que se realiza esta actividad se deberá de realizar de acuerdo
+con el método siguiente:
+<h4>AI.1. Antes de comenzar a aplicar el método, se deberá de considerar lo siguiente:</h4>
+Utilizar el tiempo que sea necesario para observar la actividad. Asegurar que lo
+observado sea representativo del procedimiento normal de trabajo;
+<p>➢ Involucrar a los trabajadores, supervisores del trabajo o encargados de seguridad
+y salud en el trabajo durante el proceso de evaluación;
+</p><p></p>➢ Identificar el tipo de actividad, si es levantamiento/descenso con un solo
+trabajador, levantamiento/descenso en equipo, o transporte de cargas. Si el
+proceso involucra una combinación de estas actividades considerar todas;
+<p></p><p></p>➢ Analizar este Apéndice antes de realizar la estimación del nivel de riesgo;
+<p></p><p></p>➢ Seguir la guía de evaluación para determinar el nivel de riesgo para cada factor
+de riesgo identificado, y clasificar el nivel de riesgo conforme a la Tabla AI.1
+siguiente:<p></p></div></div>
+
+
+<div class="page">
+<img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+
+<h4>Tabla AI.1 Nivel de riesgo</h4>
+<div class="flex-center">
+<img src="./tabla1.png" alt="Descripción de la imagen" width="65%" height="65%">
+</div>        
+<p></p>➢ Hay que considerar que las bandas de color indican cuáles elementos de la
+actividad son los que requieren mayor atención;<p></p>
+<p>➢ Evaluar cada actividad por separado y dar prioridad a la actividad de mayor nivel de
+riesgo cuando el trabajador realice varias actividades;</p>
+<p>➢ Las variables consideradas son distintas en cada una de las tareas evaluadas,
+describiendo las condiciones de trabajo en las que se realiza cada tarea. </p>
+
+
+
+</div></div>
+
+<div class="page">
+<img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+A modo de resumen, en la guía complementaria a la norma se puede encontrar el siguiente
+diagrama de aplicación general
+<div class="flex-center">
+    <img src="./tabla2.JPG" alt="Descripción de la imagen" width="75%" height="75%">
+  </div> 
+  <button id="download">Descargar PDF</button>
+
+</div></div>
+
+
+
+<script>
+    document.getElementById('download').addEventListener('click', function() {
+        var element = document.body;
+        var downloadButton = document.getElementById('download');
+     
+
+        // Ocultar los botones antes de generar el PDF
+        downloadButton.style.display = 'none';
+       
+        // Solicitar el nombre del archivo al usuario
+        var fileName = prompt("Por favor, ingrese el nombre del archivo:", "mi-pdf");
+
+        // Verificar si el usuario ha ingresado un nombre
+        if (fileName) {
+            // Configuración del tamaño del PDF y márgenes negativos
+            var options = {
+                margin: [-6.6, -6.6, -6.6, -6.6], // márgenes negativos en milímetros (top, right, bottom, left)
+                filename: fileName + '.pdf', // Nombre del archivo ingresado por el usuario
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 }, // Ajustar la escala para mejorar la calidad de imagen
+                jsPDF: { unit: 'mm', format: [215.9, 305.1], orientation: 'portrait' } // Tamaño en mm
+            };
+
+            html2pdf().from(element).set(options).save().then(() => {
+                // Mostrar los botones después de que se haya generado el PDF
+                downloadButton.style.display = 'block';
+                calculateButton.style.display = 'block';
+            });
+        } else {
+            alert("Debe ingresar un nombre para el archivo.");
+            // Mostrar los botones si no se ingresó un nombre
+            downloadButton.style.display = 'block';
+            calculateButton.style.display = 'block';
+        }
+    });
+</script>
+
+    
+
+<script>
+    function hideButton() {
+        var btn = document.getElementById('calculate-btn5');
+        btn.style.display = 'none'; // Oculta el botón
+    }
+</script>
+<script>
+    function mostrarImagen(button, inputId, previewId) {
+        var input = document.getElementById(inputId);
+        var preview = document.getElementById(previewId);
+    
+        input.onchange = function () {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    button.style.display = 'none'; // Ocultar el botón específico después de seleccionar la imagen
+                };
+    
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+    
+        input.click(); // Simular clic en el input file
+    }
+    </script>
+
+
+<script>
+    const signatureCanvas = document.getElementById('signature-pad');
+    const signatureCtx = signatureCanvas.getContext('2d');
+    let drawing = false;
+
+    signatureCanvas.addEventListener('mousedown', () => {
+        drawing = true;
+        signatureCtx.beginPath();
+    });
+
+    signatureCanvas.addEventListener('mouseup', () => {
+        drawing = false;
+    });
+
+    signatureCanvas.addEventListener('mousemove', (event) => {
+        if (!drawing) return;
+        const rect = signatureCanvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        signatureCtx.lineTo(x, y);
+        signatureCtx.stroke();
+    });
+
+    document.getElementById('clear-button').addEventListener('click', () => {
+        signatureCtx.clearRect(0, 0, signatureCanvas.width, signatureCanvas.height);
+    });
+
+    document.getElementById('save-button').addEventListener('click', () => {
+        const dataURL = signatureCanvas.toDataURL();
+        console.log('Imagen guardada:', dataURL);
+        // Aquí puedes agregar el código para enviar la imagen a un servidor o guardarla
+    });
+</script>
+
+<script>
+    function mostrarImagen(button, inputId, previewId) {
+        var input = document.getElementById(inputId);
+        var preview = document.getElementById(previewId);
+    
+        input.onchange = function () {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    button.style.display = 'none'; // Ocultar el botón específico después de seleccionar la imagen
+                };
+    
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+    
+        input.click(); // Simular clic en el input file
+    }
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('[id^="btn"]').forEach(button => {
+            const btnId = parseInt(button.id.slice(3));
+            if (btnId >= 140 && btnId <= 168) {
+              button.addEventListener('click', function () {
+                const questionIndex = parseInt(this.id.slice(3));
+                const buttons = document.querySelectorAll(`[id^="btn${questionIndex}"]`);
+                if (this.classList.contains('selected')) {
+                  this.classList.remove('selected');
+                } else {
+                  buttons.forEach(btn => {
+                    btn.classList.remove('selected');
+                  });
+                  this.classList.add('selected');
+                }
+              });
+            }
+          });
+    
+          document.getElementById('calculate-btn5').addEventListener('click', function () {
+            calcularResultado();
+            document.getElementById('recalculate-btn5').style.display = 'block';
+          });
+    
+          document.getElementById('recalculate-btn5').addEventListener('click', function () {
+            calcularResultado();
+          });
+    
+          function calcularResultado() {
+            const buttonIds = [];
+            for (let i = 140; i <= 168; i++) {
+              buttonIds.push('btn' + i);
+            }
+    
+            let total = 0;
+            let selectedValues = [];
+            buttonIds.forEach(id => {
+              const button = document.getElementById(id);
+              if (button && button.classList.contains('selected')) {
+                const value = parseInt(button.value);
+                total += value;
+                selectedValues.push(value);
+              }
+            });
+    
+            const resultMessage = document.getElementById('result5');
+            if (total <= 4) {
+              resultMessage.innerText = 'Resultado: Aceptable';
+              resultMessage.style.backgroundColor = 'lightgreen';
+            } else if (total <= 12) {
+              resultMessage.innerText = 'Resultado: Posible';
+              resultMessage.style.backgroundColor = 'yellow';
+            } else if (total <= 20) {
+              resultMessage.innerText = 'Resultado: Significativo';
+              resultMessage.style.backgroundColor = 'red';
+            } else {
+              resultMessage.innerText = 'Resultado: Inaceptable';
+              resultMessage.style.backgroundColor = 'purple';
+            }
+    
+            const resultSection = document.getElementById('result-section5');
+            resultSection.style.display = 'block';
+    
+            const sumMessage = document.getElementById('sum-message5');
+            sumMessage.innerText = `Suma de valores seleccionados: ${total}`;
+    
+            const sumSection = document.getElementById('sum-section5');
+            sumSection.style.display = 'block';
+            sumSection.className = '';
+            sumSection.classList.add('sum-section-' + total);
+            if (total <= 4) {
+              sumSection.classList.add('fondo-verde');
+            } else if (total <= 12) {
+              sumSection.classList.add('fondo-amarillo');
+            } else if (total <= 20) {
+              sumSection.classList.add('fondo-rojo');
+            } else {
+              sumSection.classList.add('fondo-morado');
+            }
+    
+            document.getElementById('calculate-btn5').style.display = 'none';
+          }
+        });
+    
+        function mostrarMensaje(btnId, mensaje) {
+          var mensajeDiv = document.getElementById("mensaje" + btnId.slice(3));
+          if (mensajeDiv.innerText === mensaje) {
+            mensajeDiv.innerText = '';
+            mensajeDiv.style.backgroundColor = '';
+            mensajeDiv.classList.remove('texto-blanco');
+          } else {
+            mensajeDiv.innerText = mensaje;
+            mensajeDiv.style.backgroundColor = '';
+            if (btnId === 'btn140' || btnId === 'btn144' || btnId === 'btn148' || btnId === 'btn152' || btnId === 'btn156' || btnId === 'btn159' || btnId === 'btn162' || btnId === 'btn165' ) {
+              mensajeDiv.style.backgroundColor = 'lightgreen';
+            } else if (btnId === 'btn141' || btnId === 'btn145' || btnId === 'btn146' || btnId === 'btn149' || btnId === 'btn153' || btnId === 'btn157' || btnId === 'btn160' || btnId === 'btn163' || btnId === 'btn167') {
+              mensajeDiv.style.backgroundColor = 'yellow';
+            } else if (btnId === 'btn142' || btnId === 'btn147' || btnId === 'btn150' || btnId === 'btn151' || btnId === 'btn154' || btnId === 'btn158' || btnId === 'btn161' || btnId === 'btn164' || btnId === 'btn168') {
+              mensajeDiv.style.backgroundColor = 'crimson';
+              mensajeDiv.classList.add('texto-blanco');
+            } else if (btnId === 'btn143') {
+              mensajeDiv.style.backgroundColor = 'purple';
+              mensajeDiv.classList.add('texto-blanco');
+            }
+          }
+        }
+    
+        // Asignación de eventos a los botones
+        document.getElementById("btn140").addEventListener("click", function() {
+          mostrarMensaje("btn140", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn141").addEventListener("click", function() {
+          mostrarMensaje("btn141", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn142").addEventListener("click", function() {
+          mostrarMensaje("btn142", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn143").addEventListener("click", function() {
+          mostrarMensaje("btn143", "Has seleccionado Nivel morado");
+        });
+    
+        document.getElementById("btn144").addEventListener("click", function() {
+          mostrarMensaje("btn144", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn145").addEventListener("click", function() {
+          mostrarMensaje("btn6145", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn146").addEventListener("click", function() {
+          mostrarMensaje("btn146", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn147").addEventListener("click", function() {
+          mostrarMensaje("btn147", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn148").addEventListener("click", function() {
+          mostrarMensaje("btn148", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn149").addEventListener("click", function() {
+          mostrarMensaje("btn149", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn150").addEventListener("click", function() {
+          mostrarMensaje("btn150", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn151").addEventListener("click", function() {
+          mostrarMensaje("btn151", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn152").addEventListener("click", function() {
+          mostrarMensaje("btn152", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn153").addEventListener("click", function() {
+          mostrarMensaje("btn153", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn154").addEventListener("click", function() {
+          mostrarMensaje("btn154", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn156").addEventListener("click", function() {
+          mostrarMensaje("btn156", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn157").addEventListener("click", function() {
+          mostrarMensaje("btn157", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn158").addEventListener("click", function() {
+          mostrarMensaje("btn158", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn159").addEventListener("click", function() {
+          mostrarMensaje("btn159", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn160").addEventListener("click", function() {
+          mostrarMensaje("btn160", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn161").addEventListener("click", function() {
+          mostrarMensaje("btn161", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn162").addEventListener("click", function() {
+          mostrarMensaje("btn162", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn163").addEventListener("click", function() {
+          mostrarMensaje("btn163", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn164").addEventListener("click", function() {
+          mostrarMensaje("btn164", "Has seleccionado Nivel rojo");
+        });
+    
+        document.getElementById("btn165").addEventListener("click", function() {
+          mostrarMensaje("btn165", "Has seleccionado Nivel verde");
+        });
+    
+        document.getElementById("btn167").addEventListener("click", function() {
+          mostrarMensaje("btn167", "Has seleccionado Nivel naranja");
+        });
+    
+        document.getElementById("btn168").addEventListener("click", function() {
+          mostrarMensaje("btn168", "Has seleccionado Nivel rojo");
+        });
+      </script>
+    
+    
+  
+    <script>
+        document.getElementById('download').addEventListener('click', function() {
+            // Aquí puedes añadir la lógica para descargar el PDF
+            // ...
+    
+            // Luego, enviar un mensaje al script principal para cambiar a la siguiente página después de 10 segundos
+            window.parent.postMessage('nextPage', '*');
+        });
+    </script>
+   
+<script src="./hoja.js"></script>
+<script src="./funcion.js"></script>
+<script src="./prueba.js"></script>
+
+</body>
+</html>

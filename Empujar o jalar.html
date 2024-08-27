@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <title>Empujar o jalar</title>
+
+
+    <style>
+         button {
+    display: block;
+    text-align: left;
+    margin: 0;
+  padding-top: 15px;
+  padding: 15px;
+}
+    </style>
+</head>
+
+<body>
+
+
+    
+    <div id="survey-container">
+    
+
+<!-- EMPUJAR O JALAR CARGAS CON EL USO DE EQUIPO AUXILIR conequipo -->
+
+<div class="page">
+    <img src="./cabezera.png" alt="" width="100%" height="18%">
+<div id="informacion-text">
+
+    
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <p><h3>Factores de riesgo ergonómico en el trabajo-identificación, análisis, prevención y control.</p> <p>parte 1: manejo manual de cargas. </p>  <p>EMPUJAR O JALAR CARGAS CON EL USO DE EQUIPO AUXILIR</p></h3> 
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+        </tr>
+    </table>
+
+    <h4>Formulario de Trabajador</h4>
+    <table class="mi-tabla">
+        <tr>
+            <th>
+                <div class="form-row">
+                    <label for="numeroEmpleado">Nombre del trabajador:</label>
+                    <input type="text" id="numeroEmpleado" name="numeroEmpleado" required>
+                    
+                </div>
+               
+            </th>
+           
+            <th>
+                <div class="form-row">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" required>
+                </div>
+            </th>
+
+            <th>
+                <div class="form-row">
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero">
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                    </select>
+                </div>
+            </th>
+            
+        </tr>
+        <tr>
+            <td>
+                <div class="form-row">
+                    <label for="actividad">Actividad:</label>
+                    <select id="actividad" name="actividad">
+                        <option value="uno">Pequeño con una o dos ruedas </option>
+                        <option value="dos">Mediano, con tres o más ruedas fijas y/o ruedas móviles (rodajas)
+                        </option>
+                        <option value="tres">Grande, dirigible o sobre rieles</option>
+                    </select>
+                </div>
+            </td>
+            <td> <label for="nombreEmpleado">Puesto evaluado:</label>
+                <input type="text" id="nombreEmpleado" name="nombreEmpleado" required></td>
+                <td> <label for="fecha">Fecha:</label><input type="date" id="fecha" name="fecha" required>
+                </td>
+        </tr>
+    </table>
+    <table class="mi-tabla">
+
+        <th><label for="descripcion">Describe la actividad:</label>
+            <textarea id="descripcion" placeholder="Escribe la descripción de la actividad aquí..."></textarea>
+</label></th>
+    </table>
+    <table class="mi-tabla">
+        <th><label for="actividad">Frecuencia con la que realizan la actividad:</label>
+            <textarea id="actividadTextarea" placeholder=></textarea></th>
+        <th><label for="actividad">Tiempo de duracion de la actividad</label>
+            <textarea id="actividadTextarea" placeholder=></textarea></th>
+
+    </table>
+</div></div>
+    
+    <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th>
+                    <p><h1>A) Tipo de equipo auxiliar y peso de la carga (kg)</h1></p>
+                </th>
+            </tr>
+            
+        </table>
+
+        <table class="mi-tabla">
+            <tr>
+                <th><button id="btn61" class="white-btn" value="0">Pequeño con una o dos ruedas </button>
+                <img src="./d/1.jpg" alt="">
+                
+                </th>
+                <th><button id="btn62" class="white-btn" value="0">Mediano, con tres o más ruedas fijas y/o ruedas móviles (rodajas)</button>
+                <img src="./d/2.jpg" alt="">
+                </th>
+                <th><button id="btn63" class="white-btn" value="0">Grande, dirigible o sobre rieles</button>
+                <img src="./d/3.jpg" alt="">
+                </th>
+              </tr>
+              
+              <tr>
+                <td><button id="btn64" class="green-btn" value="4">Menos de 50kg</button>
+                  <button id="btn65" class="yellow-btn" value="4">De 50kg a 100kg</button>
+                  <button id="btn66" class="red-btn" value="6">De 100kg a 200kg</button>
+                  
+                  <button id="btn67" class="red-btn" value="10">Mas de 200kg</button>
+                  <button id="btn68" class="purple-btn" value="10">La carga excede la capacidad nominal del equipo (peso máximo recomendado por el fabricante)</button>
+                  </td>
+                
+                  <td><button id="btn69" class="green-btn" value="4">Menos de 250kg</button>
+                  <button id="btn70" class="yellow-btn" value="4">De 250kg a 500kg </button>
+                  <button id="btn71" class="red-btn" value="6">De 500kg a 750kg</button>
+                  <button id="btn72" class="red-btn" value="10">Mas de 750kg</button>
+                  <button id="btn73" class="purple-btn" value="10">La carga excede la capacidad nominal del equipo (peso máximo recomendado por el fabricante)</button></td>
+                
+                  <td><button id="btn74" class="green-btn" value="4">Menos de 600kg </button>
+                  <button id="btn74" class="yellow-btn" value="4">De 600kg a 1000kg </button>
+                  <button id="btn75" class="red-btn" value="6">De 1000kg a 1500kg</button>
+                  <button id="btn76" class="red-btn" value="10">Mas de 1500kg</button>
+                  <button id="btn77" class="purple-btn" value="10">La carga excede la capacidad nominal del equipo (peso máximo recomendado por el fabricante)</button></td>
+              </tr>
+              <tr>
+                <td colspan="3">
+
+                    <p>
+                        I.     Evaluar la masa total movida, si se mueve más de un equipo de carga (por ejemplo, dos carretillas);
+
+
+                    </p>
+                    <p>
+                        II.     Conocer y determinar la carga total movida (masa del equipo auxiliar y masa de las cargas transportadas) con base al etiquetado, preguntando a los trabajadores o pesando la carga, y
+                    </p>
+                    <p>
+                        III.    Evaluar el equipo con la carga de mayor masa que es probable que se mueva, si se utiliza el mismo equipo para mover diferentes cargas.
+
+                    </p>
+                </td>
+              </tr>
+            
+        </table>
+       
+    </div></div>
+    
+    <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th colspan="3"> <p><h1>B) Postura:</h1></p>
+     <h4>I. Observar la posición general de las manos y del cuerpo durante la operación.</h4>
+                </th>
+                
+            </tr>
+    
+            <tr>
+                <th colspan="3">
+                
+     <div style="text-align: left;">
+                            <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput21', 'preview21')">Capture la imagen de la postura a evaluar</button>
+        <input type="file" id="fileInput21" accept="image/*" style="display: none;">
+        <img id="preview21" alt="Vista previa de la imagen 21" height="30%" width="30%"></div></th>
+            </tr>
+            <tr>
+    
+    
+                <td><img src="./d/4.png" alt="" height="70%" width="70%" > </td>
+                <td><img src="./d/5.png" alt="" height="70%" width="70%" > </td>
+                <td><img src="./d/6.png" alt="" height="70%" width="70%" > </td>
+               
+            </tr>
+            <tr>
+                <td>
+    <button id="btn78" class="green-btn" value="0">El torso se encuentra verticalmente ens su mayor parte y el torso no esta torsido y las manos estan entre la cadera y la altura del hombro </button>
+                 <td>
+                <button id="btn79" class="yellow-btn" value="3">El cuerpo esta inclinado en el la direccion del esfuerzo o el torso esta visiblemente flexionado o torcido o las manos estan por debajo de la altura de la cadera</button>
+                 </td>
+                 <td>
+                  <button id="btn80" class="red-btn" value="3">El cuerpo esta muy inclinado o el trabajador se ponen en cunclillas, se arrodilla o necesita empujar con la espalda contra la carga o el torso esta severamente flexionado o torcido o las manos estan detras o en un lado del cuerpo o por encima de la altura de los hombros </button>
+                    
+                      
+                 </td>
+                 </tr>
+        </table>
+        
+        
+    </div></div>
+
+    <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th colspan="3"> <p><h1>C) Acoplamiento de la mano-carga:</h1></p>
+     <h4>I.     Observar cómo es el agarre con las manos o cómo están en contacto con la carga durante el empuje o la tracción. Si la operación implica tanto empujar como jalar, evalúe la empuñadura para ambas acciones.</h4>
+                </th>
+                
+            </tr>
+    
+            <tr>
+                <th colspan="3">
+                
+     <div style="text-align: left;">
+                            <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput22', 'preview22')">Capture la imagen de la postura a evaluar</button>
+        <input type="file" id="fileInput22" accept="image/*" style="display: none;">
+        <img id="preview22" alt="Vista previa de la imagen 22" height="30%" width="30%"></div></th>
+            </tr>
+            <tr>
+    
+    
+                <td><img src="./d/7.png" alt="" height="70%" width="70%" > </td>
+                <td><img src="./d/8.png" alt="" height="70%" width="70%" > </td>
+                <td><img src="./d/9.png" alt="" height="70%" width="70%" > </td>
+               
+            </tr>
+            <tr>
+                <td>
+    <button id="btn81" class="green-btn" value="0">Hay manijas o azas, que permitan un comodo agarre para aplicar fuerza para jalar o un comodo agarre completo de la mano para empujar </button>             <td>
+                <button id="btn82" class="yellow-btn" value="1">Hay zonas de agarre, pero solo permiten un agarre parcial por ejemplo, dedos que sujetan a 90°, o contacto parcial de la mano para empujar</button>
+                 </td>
+                 <td>
+                <button id="btn83" class="red-btn" value="3">No hay azas o el contacto de la mano es incodmodo
+                        </button>
+                    
+                      
+                 </td>
+                 </tr>
+        </table>
+        
+    </div></div>
+
+    <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th>
+                    <p><h1>D)  Patrón de trabajo:</h1> </p>
+    <h4> I. Observar el trabajo, e identificar si la operación es repetitiva (cinco o más traslados por minuto) y si el trabajador establece el ritmo de trabajo.
+        
+        </h4>
+        <h4>II.     Preguntar a los trabajadores sobre su patrón de descansos y sobre otras oportunidades que tienen para descansar o recuperarse del trabajo.</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+
+                    <div style="text-align: left;">
+                        <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput27', 'preview27')">Capture la imagen de la postura a evaluar </button>
+    <input type="file" id="fileInput27" accept="image/*" style="display: none;">
+    <img id="preview27" alt="Vista previa de la imagen 27 " height="300px" width="300px">
+                    </div>
+                    <button id="btn84" class="green-btn" value="0">El trabajo no es repetiivo(menos de cinco traslados por minuto) y el ritmo de trabajo es fijado por el trabajador</button>
+    <button id="btn85" class="yellow-btn" value="1">El trabajo es repetitivo, pero hay oportunidades para descansar o de recuperarse a traves de descansos formales e informales o a traves de la rotacion de trabajo</button>
+    <button id="btn86" class="red-btn" value="2">El trabajo es repetitivo y no hay descansos formales/informales u oportunidad de rotar los puestos de trabajo </button>
+                   
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div></div> <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th>
+                    <p><h1>E)   Distancia por viaje:</h1></p>
+                    <h4>I.     Determinar la distancia desde el principio hasta el final para un solo viaje
+                       
+                        
+                        </h4>
+                        <h4> II.     Hacer una evaluación para el viaje más largo, si la operación no es repetitiva</h4>
+                        <h4>III.    Determinar la distancia promedio para al menos cinco viajes, si la operación es repetitiva</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+
+                    <div style="text-align: left;">
+                        <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput23', 'preview23')">Capture la imagen de la postura a evaluar </button>
+    <input type="file" id="fileInput23" accept="image/*" style="display: none;">
+    <img id="preview23" alt="Vista previa de la imagen 23 " height="300px" width="300px">
+                    </div>
+                    <button id="btn87" class="green-btn" value="0">10m o menos 
+
+                    </button>
+                    <button id="btn88" class="yellow-btn" value="1">Entre 10m y 30m</button>
+                    <button id="btn89" class="red-btn" value="3">Mas de 30m
+                    </button>
+                   
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div></div> <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th>
+                    <p><h1> F) Condición del equipo auxiliar:</h1></p>
+                    <h4> l. Consultar el programa o manuales de mantenimiento y observar el estado general de conservación del equipo (condición de las ruedas, cojinetes y frenos).</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+
+                    <div style="text-align: left;">
+                        <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput24', 'preview24')">Capture la imagen de la postura a evaluar</button>
+    <input type="file" id="fileInput24" accept="image/*" style="display: none;">
+    <img id="preview24" alt="Vista previa de la imagen 24 " height="300px" width="300px">
+                    </div>
+                    <button id="btn90" class="green-btn" value="0">El mantenimiento esta planificado y es preventivo.
+                        El equipo esta en buen estado de conservacion
+                     </button>
+                     <button id="btn91" class="yellow-btn" value="1">El mantenimiento ocurre solo cuando surgen problemas, el equipo esta en un estado razonable de conservacion</button>
+                     <button id="btn92" class="red-btn" value="2">El mantenimiento no esta planificado(no hay un sistema claro en su lugar) o el equipo esta en mal estado de conservacion
+                     </button>
+                    
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div></div> <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th>
+                    <p><h1> G) Superficie de trabajo:</h1></p>
+        <h4> l. Identificar la condición en que se encuentran las superficies de trabajo a lo largo de la ruta y determinar el nivel de riesgo utilizando los siguientes criterios.</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+
+                    <div style="text-align: left;">
+                        <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput25', 'preview25')">Capture la imagen de la postura a evaluar</button>
+    <input type="file" id="fileInput25" accept="image/*" style="display: none;">
+    <img id="preview25" alt="Vista previa de la imagen 25 " height="300px" width="300px">
+                    </div>
+                    <button id="btn93" class="green-btn" value="0">seco y limpio, nivelado, firme y en buen estado (no dañado o irregular)
+                    </button>
+                    <button id="btn94" class="yellow-btn" value="1">En mayor parte seco y limpio(humedad o escombros en algunas areas) o en pendientes (inclinaciones entre 3° y 8°) o razonablemente firme baja los pies(por ejemplo alafombras) o malas condicones (daños menores)</button>
+                    <button id="btn95" class="red-btn" value="2">Contaminado( mojado o con escombros en varias areas) o pendientes pronunciadas (inclinaciones superiotes a 5°) o suacve o inestable bajo los pies(grava, arena, barro) o muy mal estado(daño severo)
+                    </button>
+                    
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div></div> <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th>
+                    <p><h1>H) Obstáculos a lo largo de la ruta:</h1></p>
+                    <h4>l. Verificar en la ruta si hay obstáculos. Tener en cuenta si el equipo se mueve por encima de cables, a través de bordes elevados, hacia arriba o hacia abajo en rampas empinadas (pendiente de más de 5°), subiendo o bajando escalones, a través de puertas bloqueadas/estrechas, en espacios confinados, alrededor de curvas, esquinas u objetos.
+                       
+                       </h4>
+                       <h4>II.     Contar cada tipo de obstáculo sólo una vez, sin importar cuántas veces se pase por éste.</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+
+                    <div style="text-align: left;">
+                        <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput28', 'preview28')">Capture la imagen de la postura a evaluar </button>
+    <input type="file" id="fileInput28" accept="image/*" style="display: none;">
+    <img id="preview28" alt="Vista previa de la imagen 28 " height="300px" width="300px">
+                    </div>
+                    <button id="btn96" class="green-btn" value="0">Sin obstaculos 
+                    </button>
+                    <button id="btn97" class="yellow-btn" value="1">Un tipo de obstaculo pero sin escalones o rampas empinadas</button>
+                    <button id="btn98" class="red-btn" value="2">Escalones, rampas empinadas o dos o mas tipos de obstaculos</button>
+                    
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div></div> <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+        
+        <table class="mi-tabla">
+            <tr>
+                <th>
+                    <p><h1>I)  Otros factores:</h1></p>
+    <h4>  l. La carga es inestable</h4>
+        <h4>II.     La carga es grande y obstruye la vista del trabajador de donde se está moviendo</h4>
+        <h4> III.    La carga presenta bordes filosos, está caliente o es potencialmente dañina al tacto</h4>
+            <h4> IV.   Hay malas condiciones de iluminación</h4>
+                <h4>V.    Hay temperaturas extremas calientes o frías o alta humedad</h4>
+                    <h4>VI.   Hay ráfagas de viento u otros movimientos fuertes del aire.</h4>
+                        <h4>VII.   El equipo de protección personal o la vestimenta hacen que el arrastre y empuje de la carga sea más complicado.</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div style="text-align: left;">
+                        <button id="selectButton" class="selectButton" onclick="mostrarImagen(this, 'fileInput26', 'preview26')">Capture la imagen de la postura a evaluar</button>
+    <input type="file" id="fileInput26" accept="image/*" style="display: none;">
+    <img id="preview26" alt="Vista previa de la imagen 26 " height="40%" width="40%">
+                    </div>
+                    <button id="btn99" class="green-btn" value="0">No hay otros factores presentes</button>
+    <button id="btn100" class="yellow-btn" value="1">Un factor presente </button>
+    <button id="btn101" class="red-btn" value="2">Dos o mas factores presentes
+    </button>
+                    
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div></div>
+
+
+    <div class="page">
+        <img src="./cabezera.png" alt="" width="100%" height="18%">
+    <div id="informacion-text">
+    
+    
+        <table class="mi-tabla">
+            <tr>
+              <th colspan="3" class="encabezado-grande">RESULTADOS DE LA EVALUACIÓN</th>
+            </tr>
+            <tr>
+              <th colspan="3" class="encabezado-chico">EMPUJAR O JALAR CARGAS CON EL USO DE EQUIPO AUXILIR</th>
+            </tr>
+            <tr>
+              <td class="columna-1">Factores de riesgo</td>
+              <td class="columna-2">Color y Valor</td>
+            </tr>
+            <tr>
+                <td class="columna-1">A) Tipo de equipo auxiliar y peso de la carga (kg)</td>
+                <td class="columna-2">
+                    <div id="mensaje61" class="mensaje"></div>
+                    <div id="mensaje62" class="mensaje"></div>
+                    <div id="mensaje63" class="mensaje"></div>
+                    <div id="mensaje64" class="mensaje"></div>
+                    <div id="mensaje65" class="mensaje"></div>
+                    <div id="mensaje66" class="mensaje"></div>
+                    <div id="mensaje67" class="mensaje"></div>
+                    <div id="mensaje68" class="mensaje"></div>
+                    <div id="mensaje69" class="mensaje"></div>
+                    <div id="mensaje70" class="mensaje"></div>
+                    <div id="mensaje71" class="mensaje"></div>
+                    <div id="mensaje72" class="mensaje"></div>
+                    <div id="mensaje73" class="mensaje"></div>
+                    <div id="mensaje74" class="mensaje"></div>
+                    <div id="mensaje75" class="mensaje"></div>
+                    <div id="mensaje76" class="mensaje"></div>
+                    <div id="mensaje77" class="mensaje"></div>
+                
+                </td>
+            </tr>
+            <tr>
+                <td class="columna-1">B) Postura</td>
+                <td class="columna-2"> 
+                    <div id="mensaje78" class="mensaje"></div>
+                    <div id="mensaje79" class="mensaje"></div>
+                    <div id="mensaje80" class="mensaje"></div>
+                </td>
+                <td rowspan="3" class="columna-3"><img src="./tablaf.png" alt=""></td>
+            </tr>
+            <tr>
+                <td class="columna-1">C) Acoplamiento de la mano-carga</td>
+                <td class="columna-2">
+                    <div id="mensaje81" class="mensaje"></div>
+                    <div id="mensaje82" class="mensaje"></div>
+                    <div id="mensaje83" class="mensaje"></div></td>
+            </tr>
+            <tr>
+                <td class="columna-1">D) Patrón de trabajo</td>
+                <td class="columna-2"> 
+                    <div id="mensaje84" class="mensaje"></div>
+                    <div id="mensaje85" class="mensaje"></div>
+                    <div id="mensaje86" class="mensaje"></div>
+            </td>
+            </tr>
+            <tr>
+                <td class="columna-1">E) Distancia por viaje</td>
+                <td class="columna-2"> 
+                    <div id="mensaje87" class="mensaje"></div>
+                    <div id="mensaje88" class="mensaje"></div>
+                    <div id="mensaje89" class="mensaje"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="columna-1">F) Condición del equipo auxiliar</td>
+                <td class="columna-2">
+                    <div id="mensaje90" class="mensaje"></div>
+                    <div id="mensaje91" class="mensaje"></div>
+                    <div id="mensaje92" class="mensaje"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="columna-1">G) Superficie de trabajo</td>
+                <td class="columna-2"> 
+                    <div id="mensaje93" class="mensaje"></div>
+                    <div id="mensaje94" class="mensaje"></div>
+                    <div id="mensaje95" class="mensaje"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="columna-1">H) Obstáculos a lo largo de la rutas </td>
+                <td class="columna-2"> 
+                    <div id="mensaje96" class="mensaje"></div>
+                    <div id="mensaje97" class="mensaje"></div>
+                    <div id="mensaje98" class="mensaje"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="columna-1">I) Otros factores</td>
+                <td class="columna-2">   
+                    <div id="mensaje99" class="mensaje"></div>
+                    <div id="mensaje100" class="mensaje"></div>
+                    <div id="mensaje101" class="mensaje"></div></td>
+            </tr>
+            <tr>
+                <td class="columna-1">Puntuación</td>
+                <td class="columna-2"><div id="sum-message3"></div>
+                    
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="columna-1">Nivel de Riesgo</td>
+                <td class="columna-2"> <div id="result-section3" style="display: none;">
+                    <div id="result3"></div>
+                    
+                    </div>
+                </td>
+            </tr>
+          </table>
+          
+
+
+
+
+          <button id="calculate-btn">Calcular</button>
+
+          <button id="download">Descargar PDF</button>
+
+
+
+
+
+</div></div></div>
+
+
+    
+
+<script>
+    function hideButton() {
+        var btn = document.getElementById('calculate-btn');
+        btn.style.display = 'none'; // Oculta el botón
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleccionar todos los botones con IDs del 'btn61' al 'btn101'
+        document.querySelectorAll('[id^="btn"]').forEach(button => {
+            const btnId = button.id.slice(3); // Obtener el número de ID sin 'btn'
+            if (btnId >= 61 && btnId <= 101) { // Verificar que esté en el rango deseado
+                button.addEventListener('click', function () {
+                    // Obtener el índice del botón
+                    const questionIndex = parseInt(this.id.slice(3));
+                    // Seleccionar todos los botones con el mismo índice
+                    const buttons = document.querySelectorAll(`[id^="btn${questionIndex}"]`);
+
+                    // Si el botón actual ya está seleccionado, deseleccionarlo
+                    if (this.classList.contains('selected')) {
+                        this.classList.remove('selected');
+                    } else {
+                        // Remover la clase 'selected' de todos los botones del mismo índice
+                        buttons.forEach(btn => {
+                            btn.classList.remove('selected');
+                        });
+
+                        // Toggle de la clase 'selected' en el botón actual
+                        this.classList.add('selected');
+                    }
+                });
+            }
+        });
+
+        document.getElementById('calculate-btn').addEventListener('click', function () {
+            // Array de IDs de los botones específicos
+            const buttonIds = [];
+            for (let i = 61; i <= 101; i++) {
+                buttonIds.push('btn' + i);
+            }
+
+            // Sumar los valores de los botones seleccionados
+            let total = 0;
+            let selectedValues = []; // Array para almacenar los valores seleccionados
+            buttonIds.forEach(id => {
+                const button = document.getElementById(id);
+                if (button && button.classList.contains('selected')) {
+                    const value = parseInt(button.value);
+                    total += value;
+                    selectedValues.push(value); // Agregar el valor al array de valores seleccionados
+                }
+            });
+
+            // Determinar el resultado y mostrarlo
+            const resultMessage = document.getElementById('result3');
+
+            if (total <= 4) {
+                resultMessage.innerText = 'Resultado: Aceptable';
+                resultMessage.style.backgroundColor = 'lightgreen';
+            } else if (total <= 12) {
+                resultMessage.innerText = 'Resultado: Posible';
+                resultMessage.style.backgroundColor = 'yellow';
+            } else if (total <= 20) {
+                resultMessage.innerText = 'Resultado: Significativo';
+                resultMessage.style.backgroundColor = 'red';
+            } else {
+                resultMessage.innerText = 'Resultado: Inaceptable';
+                resultMessage.style.backgroundColor = 'purple';
+            }
+
+            // Mostrar el contenedor de resultado
+            const resultSection = document.getElementById('result-section3');
+            resultSection.style.display = 'block';
+
+            // Mostrar el mensaje con la suma de los valores seleccionados
+            const sumMessage = document.getElementById('sum-message3');
+            sumMessage.innerText = `Suma de valores seleccionados: ${total}`;
+
+            // Aplicar color de fondo al contenedor de la suma según el resultado
+            const sumSection = document.getElementById('sum-section3');
+            sumSection.style.display = 'block';
+            sumSection.className = ''; // Limpiar todas las clases previas
+            if (total <= 4) {
+                sumSection.classList.add('fondo-verde');
+            } else if (total <= 12) {
+                sumSection.classList.add('fondo-amarillo');
+            } else if (total <= 20) {
+                sumSection.classList.add('fondo-rojo');
+            } else {
+                sumSection.classList.add('fondo-morado');
+            }
+        });
+    });
+
+    function mostrarMensaje(btnId, mensaje) {
+        var mensajeDiv = document.getElementById("mensaje" + btnId.slice(3)); // obtenemos el número del botón
+        if (mensajeDiv.innerText === mensaje) {
+            // Si el mensaje ya está mostrado, lo borramos
+            mensajeDiv.innerText = '';
+            mensajeDiv.style.backgroundColor = ''; // Limpiamos el color de fondo
+            mensajeDiv.classList.remove('texto-blanco'); // Removemos la clase de texto blanco
+        } else {
+            // Si no hay mensaje mostrado, mostramos el nuevo mensaje y establecemos el color de fondo correspondiente
+            mensajeDiv.innerText = mensaje;
+            mensajeDiv.style.backgroundColor = '';
+            if (btnId === 'btn64' || btnId === 'btn69' || btnId === 'btn74' || btnId === 'btn78' || btnId === 'btn81' || btnId === 'btn84' || btnId === 'btn87'|| btnId === 'btn90'|| btnId === 'btn93'|| btnId === 'btn96'|| btnId === 'btn99') {
+                mensajeDiv.style.backgroundColor = 'lightgreen'; // Cambiamos el color de fondo según el botón seleccionado
+            } else if (btnId === 'btn65' || btnId === 'btn70' || btnId === 'btn75' || btnId === 'btn79' || btnId === 'btn82' || btnId === 'btn85' || btnId === 'btn88'|| btnId === 'btn91'  || btnId === 'btn94'|| btnId === 'btn97'|| btnId === 'btn100') {
+                mensajeDiv.style.backgroundColor = 'yellow';
+            } else if (btnId === 'btn66' || btnId === 'btn67' || btnId === 'btn71' || btnId === 'btn72' || btnId === 'btn75' || btnId === 'btn76' || btnId === 'btn80'|| btnId === 'btn83' || btnId === 'btn86'|| btnId === 'btn89'|| btnId === 'btn92' || btnId === 'btn95'|| btnId === 'btn98' || btnId === 'btn101') {
+                mensajeDiv.style.backgroundColor = 'crimson';
+                mensajeDiv.classList.add('texto-blanco'); // Agregamos la clase de texto blanco
+            } else if (btnId === 'btn68'|| btnId === 'btn73'|| btnId === 'btn77' ) {
+                mensajeDiv.style.backgroundColor = 'purple';
+                mensajeDiv.classList.add('texto-blanco');
+            }
+        }
+    }
+
+    // Asignación de eventos a los botones
+    document.getElementById("btn61").addEventListener("click", function() {
+        mostrarMensaje("btn61", "Pequeño con una o dos ruedas");
+    });
+
+    document.getElementById("btn62").addEventListener("click", function() {
+        mostrarMensaje("btn62", "Mediano, con tres o más ruedas fijas y/o ruedas móviles (rodajas)");
+    });
+
+    document.getElementById("btn63").addEventListener("click", function() {
+        mostrarMensaje("btn63", "Grande, dirigible o sobre rieles");
+    });
+
+    document.getElementById("btn64").addEventListener("click", function() {
+        mostrarMensaje("btn64", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn65").addEventListener("click", function() {
+        mostrarMensaje("btn65", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn66").addEventListener("click", function() {
+        mostrarMensaje("btn66", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn67").addEventListener("click", function() {
+        mostrarMensaje("btn67", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn68").addEventListener("click", function() {
+        mostrarMensaje("btn68", "Has seleccionado Nivel morado");
+    });
+
+    document.getElementById("btn69").addEventListener("click", function() {
+        mostrarMensaje("btn69", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn70").addEventListener("click", function() {
+        mostrarMensaje("btn70", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn71").addEventListener("click", function() {
+        mostrarMensaje("btn71", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn72").addEventListener("click", function() {
+        mostrarMensaje("btn72", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn73").addEventListener("click", function() {
+        mostrarMensaje("btn73", "Has seleccionado Nivel morado");
+    });
+
+    document.getElementById("btn74").addEventListener("click", function() {
+        mostrarMensaje("btn74", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn75").addEventListener("click", function() {
+        mostrarMensaje("btn75", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn76").addEventListener("click", function() {
+        mostrarMensaje("btn76", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn77").addEventListener("click", function() {
+        mostrarMensaje("btn77", "Has seleccionado Nivel morado");
+    });
+
+    document.getElementById("btn78").addEventListener("click", function() {
+        mostrarMensaje("btn78", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn79").addEventListener("click", function() {
+        mostrarMensaje("btn79", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn80").addEventListener("click", function() {
+        mostrarMensaje("btn80", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn81").addEventListener("click", function() {
+        mostrarMensaje("btn81", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn82").addEventListener("click", function() {
+        mostrarMensaje("btn82", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn83").addEventListener("click", function() {
+        mostrarMensaje("btn83", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn84").addEventListener("click", function() {
+        mostrarMensaje("btn84", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn85").addEventListener("click", function() {
+        mostrarMensaje("btn85", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn86").addEventListener("click", function() {
+        mostrarMensaje("btn86", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn87").addEventListener("click", function() {
+        mostrarMensaje("btn87", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn88").addEventListener("click", function() {
+        mostrarMensaje("btn88", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn89").addEventListener("click", function() {
+        mostrarMensaje("btn89", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn90").addEventListener("click", function() {
+        mostrarMensaje("btn90", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn91").addEventListener("click", function() {
+        mostrarMensaje("btn91", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn92").addEventListener("click", function() {
+        mostrarMensaje("btn92", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn93").addEventListener("click", function() {
+        mostrarMensaje("btn93", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn94").addEventListener("click", function() {
+        mostrarMensaje("btn94", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn95").addEventListener("click", function() {
+        mostrarMensaje("btn95", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn96").addEventListener("click", function() {
+        mostrarMensaje("btn96", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn97").addEventListener("click", function() {
+        mostrarMensaje("btn97", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn98").addEventListener("click", function() {
+        mostrarMensaje("btn98", "Has seleccionado Nivel rojo");
+    });
+
+    document.getElementById("btn99").addEventListener("click", function() {
+        mostrarMensaje("btn99", "Has seleccionado Nivel verde");
+    });
+
+    document.getElementById("btn100").addEventListener("click", function() {
+        mostrarMensaje("btn100", "Has seleccionado Nivel naranja");
+    });
+
+    document.getElementById("btn101").addEventListener("click", function() {
+        mostrarMensaje("btn101", "Has seleccionado Nivel rojo");
+    });
+</script>
+<script>
+    document.getElementById('download').addEventListener('click', function() {
+        var element = document.body;
+        var downloadButton = document.getElementById('download');
+        var calculateButton = document.getElementById('calculate-btn');
+
+        // Ocultar los botones antes de generar el PDF
+        downloadButton.style.display = 'none';
+        calculateButton.style.display = 'none';
+
+        // Solicitar el nombre del archivo al usuario
+        var fileName = prompt("Por favor, ingrese el nombre del archivo:", "mi-pdf");
+
+        // Verificar si el usuario ha ingresado un nombre
+        if (fileName) {
+            // Configuración del tamaño del PDF y márgenes negativos
+            var options = {
+                margin: [-4.3, -4.3, -4.3, -4.3], // márgenes negativos en milímetros (top, right, bottom, left)
+                filename: fileName + '.pdf', // Nombre del archivo ingresado por el usuario
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 }, // Ajustar la escala para mejorar la calidad de imagen
+                jsPDF: { unit: 'mm', format: [215.9, 305.1], orientation: 'portrait' } // Tamaño en mm
+            };
+
+            html2pdf().from(element).set(options).save().then(() => {
+                // Mostrar los botones después de que se haya generado el PDF
+                downloadButton.style.display = 'block';
+                calculateButton.style.display = 'block';
+            });
+        } else {
+            alert("Debe ingresar un nombre para el archivo.");
+            // Mostrar los botones si no se ingresó un nombre
+            downloadButton.style.display = 'block';
+            calculateButton.style.display = 'block';
+        }
+    });
+</script>
+<script>
+    document.getElementById('download').addEventListener('click', function() {
+        // Aquí puedes añadir la lógica para descargar el PDF
+        // ...
+
+        // Luego, enviar un mensaje al script principal para cambiar a la siguiente página después de 10 segundos
+        window.parent.postMessage('nextPage', '*');
+    });
+</script>
+
+<script src="./hoja.js"></script>
+<script src="./funcion.js"></script>
+<script src="./prueba.js"></script>
+
+
+
+</body>
+</html>
